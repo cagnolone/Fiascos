@@ -94,7 +94,7 @@ Goals
 \end_layout
 
 \begin_layout Standard
-[G5] : Operate on reserved cars by locking/unlocking them upon users requests.
+[G5] : Grant the access to users when necessary.
 \end_layout
 
 \begin_layout Standard
@@ -116,19 +116,20 @@ Domain Assumptions
 \end_layout
 
 \begin_layout Standard
-1- Tutte le macchine coinvolte sono di proprietà dell'azienda.
+[D1] : Tutte le macchine coinvolte sono di proprietà dell'azienda.
 \end_layout
 
 \begin_layout Standard
-2- Utenti e macchine sono rintracciabile tramite GPS.
+[D2] : In order to grant localization, we assume users and cars are equipped
+ with a GPS.
 \end_layout
 
 \begin_layout Standard
-3- Tutti gli utenti di cui si parla blablbla sono registrati.
+[D3] : Tutti gli utenti di cui si parla blablbla sono registrati.
 \end_layout
 
 \begin_layout Standard
-4- The set of safe areas for parking cars is pre-defined by the management
+[D4] : The set of safe areas for parking cars is pre-defined by the management
  system.
 \end_layout
 
@@ -137,16 +138,20 @@ in riferimento al goal 1:
 \end_layout
 
 \begin_layout Standard
-5- In order to grant the identification of users, we assume that all the
- required information for the registration are authentic.
+[D5]- In order to grant the identification of users, we assume that all
+ the required information for the registration are authentic.
 \end_layout
 
 \begin_layout Standard
-6- We assume that registered users always provide a valid driving license.
+[D6]- We assume that registered users always provide a valid driving license.
 \end_layout
 
 \begin_layout Standard
-7- We assume that registered users always provide a valid payment method.
+[D7]- We assume that registered users always provide a valid payment method.
+\end_layout
+
+\begin_layout Standard
+d8 - non vengono assegnate macchine già riservate.
 \end_layout
 
 \begin_layout Standard
@@ -156,11 +161,11 @@ Requirements
 \end_layout
 
 \begin_layout Standard
-R1 : detect the number of passengers in each car.
+[R1] : detect the number of passengers in each car.
 \end_layout
 
 \begin_layout Standard
-R2 : keep track of the battery level of every vehicle.
+[R2] : keep track of the battery level of every vehicle.
 \end_layout
 
 \begin_layout Standard
@@ -168,11 +173,49 @@ in riferimento al goal 1:
 \end_layout
 
 \begin_layout Standard
-3- Upon a completed registration, the user receive a password to authenticate.
+[R3] : Upon a completed registration, the user receives a password to authentica
+te.
 \end_layout
 
 \begin_layout Standard
+in rif al g2:
+\end_layout
 
+\begin_layout Standard
+[R4] : Clients are allowed to search for a car, either based on their current
+ position or by providing an address.
+\end_layout
+
+\begin_layout Standard
+[R5] : Vehicles status is tracked by the system.
+\end_layout
+
+\begin_layout Standard
+in rif al g3:
+\end_layout
+
+\begin_layout Standard
+[R6] : Clients can reserve one car at a time up to a certain duration before
+ accessing the vehicle.
+ (1h)
+\end_layout
+
+\begin_layout Standard
+[R7] : If the user does not reach the reserved vehicle in time, the reservation
+ is cancelled.
+ (penalty fee?)
+\end_layout
+
+\begin_layout Standard
+[R8] : 
+\end_layout
+
+\begin_layout Standard
+in rif al g5:
+\end_layout
+
+\begin_layout Standard
+[R8] : 
 \end_layout
 
 \end_body
