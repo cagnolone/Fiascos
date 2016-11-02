@@ -166,7 +166,7 @@ User Characteristics
 \end_layout
 
 \begin_layout Enumerate
-Constraints
+Documents Related
 \end_layout
 
 \begin_layout Enumerate
@@ -310,8 +310,9 @@ Scope
 
 \begin_layout Standard
 The aim of the software house is to grant a functioning mobile app that
- will be used by customers to access the system and search for an available
- electric car they can use to reach their destination.
+ will be used by customers to access the system.
+ Users will search for an available electric car they can use to reach their
+ destination.
  Users must register to the system providing a valid ID, driving license,
  and payment information.
  Once registered, the user can search for a car in his proximity or near
@@ -328,6 +329,12 @@ The aim of the software house is to grant a functioning mobile app that
  details left unspecified for now – they will be described through the document.
 \end_layout
 
+\begin_layout Standard
+The system must eventually inform employees if some cars are left by customers
+ with not enough power, so they can pick them up and recharge them on the
+ nearest power station.
+\end_layout
+
 \begin_layout Subsection
 Actors
 \end_layout
@@ -338,7 +345,7 @@ Customer: the principal user of the system, has to be logged in in the system
 \end_layout
 
 \begin_layout Itemize
-Employee – ADDETTO A RICARICARE LE MACCHINE??? MAH
+Employee – viene avvisato tramite sms con delle coordinate per la macchina
 \end_layout
 
 \begin_layout Subsection
@@ -382,6 +389,13 @@ Money Saving
  mode.
 \end_layout
 
+\begin_layout Itemize
+[G8] : Grant the cars have a minimun threshold of charge when they pick
+ it up.
+ (aggiunto per la roba dei dipendeti che ricaricano macchine troppo scariche
+ mollate in giro)
+\end_layout
+
 \begin_layout Subsection
 Definitions
 \end_layout
@@ -401,8 +415,9 @@ Product Perspective
 \begin_layout Standard
 The product will be a mobile application, integrated with a GPS system and
  with a payment system.
- It will rely on a database and will be entirely user-based (COME AVVISIAMO
- EVENTUALI OPERATORI?).
+ It will rely on a database and will be entirely user-based: the employees
+ will only be contacted via SMS by the system if needed, but they are not
+ going to actually use the app.
  The software will not provide any API for integration purposes.
 \end_layout
 
@@ -414,6 +429,155 @@ User Characteristics
 We expect a user that requires an easy interface for the reservation of
  the car.
  The user must have access to Internet and a GPS on his smartphone.
+\end_layout
+
+\begin_layout Subsection
+Documents related
+\end_layout
+
+\begin_layout Itemize
+Requirements and Analysis Speciﬁcation Document (RASD).
+ 
+\end_layout
+
+\begin_layout Itemize
+Design Document (DD).
+\end_layout
+
+\begin_layout Itemize
+User’s Manual.
+\end_layout
+
+\begin_layout Itemize
+Testing report.
+ 
+\end_layout
+
+\begin_layout Subsection
+Domain Assumptions 
+\end_layout
+
+\begin_layout Itemize
+[D1]: All the vehicles involved in the document are PowerEnjoy's property.
+\end_layout
+
+\begin_layout Itemize
+[D2]: Users and cars are traceable by GPS.
+\end_layout
+
+\begin_layout Itemize
+[D3]: All the users presented in the document are registered and logged
+ in, except for where it is explicitly stated the opposite.
+\end_layout
+
+\begin_layout Itemize
+[D4]: The set of safe areas for parking cars is pre-defined by the management
+ system.
+\end_layout
+
+\begin_layout Itemize
+in riferimento al goal 1:
+\end_layout
+
+\begin_layout Itemize
+[D5]: In order to grant the identification of users, we assume that all
+ the required information for the registration are authentic.
+\end_layout
+
+\begin_layout Itemize
+[D6] We assume that registered users always provide a valid driving license.
+\end_layout
+
+\begin_layout Itemize
+[D7]: We assume that registered users always provide a valid payment method.
+\end_layout
+
+\begin_layout Section
+Specific Requirements
+\end_layout
+
+\begin_layout Subsection
+External Interface Requirements
+\end_layout
+
+\begin_layout Subsubsection
+User Interface
+\end_layout
+
+\begin_layout Standard
+qui mettiamo boh delle schermate o spieghiamo cosa si trova davanti l'utente
+\end_layout
+
+\begin_layout Subsubsection
+API interfaces
+\end_layout
+
+\begin_layout Standard
+The application relies on GoogleMaps API to calculate the nearest car from
+ the user position (https://developers.google.com/maps/) and on the Direct
+ Payment PayPal's API to ensure a safe payment enviroment for the users
+ (https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside).
+ Both the API are really well-known so the user will have no trouble using
+ the service.
+ The system must use SMS to coordinate employees, comunicating the coordinates
+ of the cars via GoogleMap links.
+\end_layout
+
+\begin_layout Subsubsection
+Hardware Limitations
+\end_layout
+
+\begin_layout Paragraph
+User:
+\end_layout
+
+\begin_layout Itemize
+3G/4G connection
+\end_layout
+
+\begin_layout Itemize
+GPS
+\end_layout
+
+\begin_layout Itemize
+Space for the app package
+\end_layout
+
+\begin_layout Paragraph
+Empoyee:
+\end_layout
+
+\begin_layout Itemize
+GPS
+\end_layout
+
+\begin_layout Itemize
+GoogleMaps installed
+\end_layout
+
+\begin_layout Subsubsection
+Proposed System
+\end_layout
+
+\begin_layout Standard
+disegnino del sistema con DB, user ecc
+\end_layout
+
+\begin_layout Subsection
+Functional Requirements
+\end_layout
+
+\begin_layout Subsubsection
+[G1] : Allow users to register and log into the system.
+\end_layout
+
+\begin_layout Itemize
+[R1] : Upon a completed registration, the user receive a password to authenticat
+e.
+\end_layout
+
+\begin_layout Itemize
+aaa 
 \end_layout
 
 \end_body
