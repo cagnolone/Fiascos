@@ -357,32 +357,36 @@ List of the principal focus of the system:
 \end_layout
 
 \begin_layout Itemize
-[G1] : Allow users to register and log into the system.
+[G1] : Allow users to register to the system.
 \end_layout
 
 \begin_layout Itemize
-[G2] : Allow registered users to search for available cars within a certain
+[G2] : Allow users to log into the system.
+\end_layout
+
+\begin_layout Itemize
+[G3] : Allow registered users to search for available cars within a certain
  area.
 \end_layout
 
 \begin_layout Itemize
-[G3] : Manage car reservations requested by users.
+[G4] : Manage car reservations requested by users.
 \end_layout
 
 \begin_layout Itemize
-[G4] : Establish an awarding system based on users behaviours.
+[G5] : Establish an awarding system based on users behaviours.
 \end_layout
 
 \begin_layout Itemize
-[G5] : Grant the access to users when necessary.
+[G6] : Grant the access to users when necessary.
 \end_layout
 
 \begin_layout Itemize
-[G6] : Charge users proportionally to the car usage.
+[G7] : Charge users proportionally to the car usage.
 \end_layout
 
 \begin_layout Itemize
-[G7] : Allow users to enter a 
+[G8] : Allow users to enter a 
 \emph on
 Money Saving
 \emph default
@@ -390,7 +394,7 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[G8] : Grant the cars have a minimun threshold of charge when they pick
+[G9] : Grant the cars have a minimun threshold of charge when they pick
  it up.
  (aggiunto per la roba dei dipendeti che ricaricano macchine troppo scariche
  mollate in giro)
@@ -458,20 +462,20 @@ Domain Assumptions
 \end_layout
 
 \begin_layout Itemize
-[D1]: All the vehicles involved in the document are PowerEnjoy's property.
+[D1] : All the vehicles involved in the document are PowerEnjoy's property.
 \end_layout
 
 \begin_layout Itemize
-[D2]: Users and cars are traceable by GPS.
+[D2] : Users and cars are traceable by GPS.
 \end_layout
 
 \begin_layout Itemize
-[D3]: All the users presented in the document are registered and logged
+[D3] : All the users presented in the document are registered and logged
  in, except for where it is explicitly stated the opposite.
 \end_layout
 
 \begin_layout Itemize
-[D4]: The set of safe areas for parking cars is pre-defined by the management
+[D4] : The set of safe areas for parking cars is pre-defined by the management
  system.
 \end_layout
 
@@ -480,16 +484,13 @@ in riferimento al goal 1:
 \end_layout
 
 \begin_layout Itemize
-[D5]: In order to grant the identification of users, we assume that all
+[D5] : In order to grant the identification of users, we assume that all
  the required information for the registration are authentic.
 \end_layout
 
 \begin_layout Itemize
-[D6] We assume that registered users always provide a valid driving license.
-\end_layout
-
-\begin_layout Itemize
-[D7]: We assume that registered users always provide a valid payment method.
+[D6] : We assume that registering users always provide valid credentials
+ (email, drving license, payment method).
 \end_layout
 
 \begin_layout Section
@@ -567,6 +568,11 @@ disegnino del sistema con DB, user ecc
 Functional Requirements
 \end_layout
 
+\begin_layout Standard
+(da tradurre bene) assumendo che le domain assumptions fatte prima valgono
+ e per raggiungere i requisiti ecc ecc..
+\end_layout
+
 \begin_layout Subsubsection
 [G1] : Allow users to register and log into the system.
 \end_layout
@@ -574,10 +580,30 @@ Functional Requirements
 \begin_layout Itemize
 [R1] : Upon a completed registration, the user receive a password to authenticat
 e.
+ <- questo va qui?
 \end_layout
 
 \begin_layout Itemize
-aaa 
+[R2] : Users must not be already registered to the system to perform the
+ registration process.
+\end_layout
+
+\begin_layout Itemize
+[R3] : Each account is linked to one and only one username, driving license.
+\end_layout
+
+\begin_layout Itemize
+[R4] : Upon registration, user must furnish an email, an username, a driving
+ license and a payment method.
+\end_layout
+
+\begin_layout Itemize
+[R5] : Registration cannot be finalised if a user provide an username, email
+ or driving license  owned by other users.
+\end_layout
+
+\begin_layout Subsubsection
+[G2] : Allow users to log into the system.
 \end_layout
 
 \end_body
