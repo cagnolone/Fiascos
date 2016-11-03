@@ -490,7 +490,7 @@ in riferimento al goal 1:
 
 \begin_layout Itemize
 [D6] : We assume that registering users always provide valid credentials
- (email, drving license, payment method).
+ (email, driving license, payment method).
 \end_layout
 
 \begin_layout Section
@@ -545,7 +545,7 @@ Space for the app package
 \end_layout
 
 \begin_layout Paragraph
-Empoyee:
+Employee:
 \end_layout
 
 \begin_layout Itemize
@@ -574,12 +574,12 @@ Functional Requirements
 \end_layout
 
 \begin_layout Subsubsection
-[G1] : Allow users to register and log into the system.
+[G1] : Allow users to register into the system.
 \end_layout
 
 \begin_layout Itemize
-[R1] : Upon a completed registration, the user receive a password to authenticat
-e.
+[R1] : Upon a completed registration, the user receives a password to authentica
+te.
  <- questo va qui?
 \end_layout
 
@@ -598,12 +598,53 @@ e.
 \end_layout
 
 \begin_layout Itemize
-[R5] : Registration cannot be finalised if a user provide an username, email
- or driving license  owned by other users.
+[R5] : Registration cannot be finalised if a user provides an username,
+ email or driving license owned by other users.
 \end_layout
 
 \begin_layout Subsubsection
 [G2] : Allow users to log into the system.
+\end_layout
+
+\begin_layout Itemize
+[R6] : In order to log into the system, the user must be already registered.
+\end_layout
+
+\begin_layout Itemize
+[R7] : Users must provide the correct (fare riferimento a R1?) username
+ and password to complete the login proess.
+\end_layout
+
+\begin_layout Itemize
+[R8] : Access is denied if the user provides wrong credentials.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.2.3 [G3] : Allow registered users to search for available cars within a
+ certain area.
+\end_layout
+
+\begin_layout Itemize
+[R9] : Users must be logged into the system in order to search for available
+ cars.
+\end_layout
+
+\begin_layout Itemize
+[R10] : The system allows users whether to perform the search from their
+ current position or a specific address.
+\end_layout
+
+\begin_layout Itemize
+[R11] : The system must keep track of the available cars at any moment in
+ time.
+ // keep track sembra avere un log delle cose per usi futuri? is aware of?
+\end_layout
+
+\begin_layout Itemize
+[R12] : The system must keep track of the location of cars at any moment
+ in time.
 \end_layout
 
 \end_body
