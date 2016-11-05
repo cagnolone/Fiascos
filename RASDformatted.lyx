@@ -481,7 +481,7 @@ Domain Assumptions
 \end_layout
 
 \begin_layout Itemize
-[D2] : Users and cars are traceable by GPS.
+[D2] : Users, cars and employees are traceable by GPS.
 \end_layout
 
 \begin_layout Itemize
@@ -499,6 +499,7 @@ Domain Assumptions
 in riferimento al goal 1:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 [D5] : In order to grant the identification of users, we assume that all
  the required information for the registration are authentic.
@@ -509,6 +510,7 @@ in riferimento al goal 1:
  (email, driving license, payment method).
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 [D7] : When the user leaves the car, it means the user is closing the driver's
  door.
@@ -517,6 +519,10 @@ in riferimento al goal 1:
 \begin_layout Itemize
 [D8] : Carseats are equipped with weight sensors.
  (la gente può cheatare?)
+\end_layout
+
+\begin_layout Itemize
+[D9] : Cars are equipped with a GPS navigator.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -830,33 +836,33 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must be able to operate remotely on the cars.
+[R39] : The system must be able to operate remotely on the cars.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Unless an user or an employee unlocks the car, it remains locked.
+[R40] : Unless an user or an employee unlocks the car, it remains locked.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Employees can unlock unreserved cars for maintenance.
+[R41] : Employees can unlock unreserved cars for maintenance.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must unlock a car only when the user who reserved it
+[R42] : The system must unlock a car only when the user who reserved it
  approaches.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must detect when the user exits the car.
+[R43] : The system must detect when the user exits the car.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The car must be locked when it is parked in a safe place and the
+[R44] : The car must be locked when it is parked in a safe place and the
  user exits it.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user must not be able to unlock a car that he/she hasn't reserved.
+[R45] : The user must not be able to unlock a car that he/she hasn't reserved.
 \end_layout
 
 \begin_layout Subsubsection
@@ -866,42 +872,42 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must know if a car is running.
+[R46] : The system must know if a car is running.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must start charging the user as soon as the engine ignites.
+[R47] : The system must start charging the user as soon as the engine ignites.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must keep track of the current charge of a car in use.
+[R48] : The system must keep track of the current charge of a car in use.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must charge the user with a given amount of money per
+[R49] : The system must charge the user with a given amount of money per
  minute.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user must be notified in real-time of the current charge.
+[R50] : The user must be notified in real-time of the current charge.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must stop charging the user when the car is parked in
+[R51] : The system must stop charging the user when the car is parked in
  a safe area and the user exits the vehicle.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must know the discounts a user has earned.
+[R52] : The system must know the discounts a user has earned.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : At the end of the ride, the system must apply the greater discount
+[R53] : At the end of the ride, the system must apply the greater discount
  among the ones earned by the user.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user is charged according to the chosen payment method.
+[R54] : The user is charged according to the chosen payment method.
 \end_layout
 
 \begin_layout Subsubsection
@@ -915,16 +921,16 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : At every time the system must know the availability of the power
+[R55] : At every time the system must know the availability of the power
  plugs at every charging station.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user must be able to communicate his destination to the system.
+[R56] : The user must be able to communicate his destination to the system.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must grant an equal distribution of the cars.
+[R57] : The system must grant an equal distribution of the cars.
 
 \color red
  
@@ -933,23 +939,28 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must choose a charging station with at least one available
+[R58] : The system must choose a charging station with at least one available
  power plug.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must let the user know the charging station where to
+[R59] : The system must let the user know the charging station where to
  leave the car in order to get the discount.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The chosen charging sttion must be no further than 1.5km from the
+[R60] : The chosen charging sttion must be no further than 1.5km from the
  user destination.
 
 \color red
  
 \color black
 //Distanza non necessaria/scorretto metterla qui?
+\end_layout
+
+\begin_layout Itemize
+[R61] : If the user leaves the car at the indicated charging station and
+ connects the plug, he receives a discount.
 \end_layout
 
 \begin_layout Subsubsection
@@ -960,19 +971,100 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must be able to keep track of the battery level of every
+[R62] : The system must be able to keep track of the battery level of every
  car.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : If a car has a battery charge below the threshold it is not reservable.
+[R63] : If a car has a battery charge below the threshold it is not reservable.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Whenever a certain car reaches the battery treshold, when it is
+[R64] : Whenever a certain car reaches the battery treshold, when it is
  parked, the nearest employee is notified with a SMS communicating the location
  of the car (via GoogleMaps link).
 \end_layout
 
+\begin_layout Subsection
+Scenarios
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+3.3.1 Scenario 1: App download and registration.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Bob has heard of the new car-sharing company 
+\shape italic
+
+\begin_inset Quotes eld
+\end_inset
+
+Fiascos
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape default
+and he wants to use this service.
+ He has an android phone, so he searches in the Google Play Store for the
+\shape italic
+ Fiascos
+\shape default
+ app and downloads it.
+ Bob opens the app, that shows the log in/registration screen.
+ Since he is a new costumer, he clicks on the registration button, and the
+ app shows him the registration form, with username, cellphone number, email
+ address, driving license and payment method fields.
+ He fills in all the fields, the data are sent to the system that checks
+ if they aren't already used, then the app notifies that the registration
+ is complete.
+ the system saves the new account in the database and sends Bob a confirmation
+ email containing the password he must use to log in.
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+3.3.2 Scenario 2: Log in and car reservation.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Bob has to go to his friend, who lives 10km far from him, but he doesn't
+ want to take the subway, instead he wants to use the 
+\shape italic
+Fiascos
+\shape default
+ service.
+ He opens the previously downloaded app on his smartphone, fills in the
+ username and password fields with his credentials and clicks the login
+ button.
+ The system checks the correctness of the data, then allows the login process.
+ The app shows Bob the home screen, where he can choose from various options.
+ Bob clicks on the 
+\begin_inset Quotes eld
+\end_inset
+
+Search cars by position
+\begin_inset Quotes erd
+\end_inset
+
+ option, since he wants to find a nearby car.
+ the system processes the request, sends the list of available cars and
+ the app shows them on a map screen.
+ Bob chooses the nearest car clicking on it, and the app shows a confirmation
+ request popup.
+ Bob clicks on the confirmation button and the request is processed by the
+ system, that changes its status form available to reserved.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
