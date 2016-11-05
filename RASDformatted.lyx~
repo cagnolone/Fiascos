@@ -762,5 +762,156 @@ te.
  to 'Available' or 'No-charge', based on the current level of battery.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+3.2.6 [G6] : Grant the access to users when necessary.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must be able to operate remotely on the cars.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : Unless an user or an employee unlocks the car, it remains locked.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : Employees can unlock unreserved cars for maintenance.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must unlock a car only when the user who reserved it
+ approaches.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must detect when the user exits the car.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The car must be locked when it is parked in a safe place and the
+ user exits it.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user must not be able to unlock a car that he/she hasn't reserved.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.2.7 [G7] : Charge users proportionally to the car usage.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must know if a car is running.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must start charging the user as soon as the engine ignites.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must keep track of the current charge of a car in use.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must charge the user with a given amount of money per
+ minute.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user must be notified in real-time of the current charge.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must stop charging the user when the car is parked in
+ a safe area and the user exits the vehicle.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must know the discounts a user has earned.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : At the end of the ride, the system must apply the greater discount
+ among the ones earned by the user.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user is charged according to the chosen payment method.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.2.8 [G8] : Allow users to enter a 
+\emph on
+Money Saving
+\emph default
+ mode.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : At every time the system must know the availability of the power
+ plugs at every charging station.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user must be able to communicate his destination to the system.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must grant an equal distribution of the cars.
+
+\color red
+ 
+\color black
+//Troppo generico..
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must choose a charging station with at least one available
+ power plug.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must let the user know the charging station where to
+ leave the car in order to get the discount.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The chosen charging sttion must be no further than 1.5km from the
+ user destination.
+
+\color red
+ 
+\color black
+//Distanza non necessaria/scorretto metterla qui?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.2.9 [G9] : Grant the cars have a minimun threshold of charge when they pick
+ it up.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must be able to keep track of the battery level of every
+ car.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : If a car has a battery charge below the threshold it is not reservable.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : Whenever a certain car reaches the battery treshold, when it is
+ parked, the nearest employee is notified with a SMS communicating the location
+ of the car (via GoogleMaps link).
+\end_layout
+
 \end_body
 \end_document
