@@ -1,0 +1,970 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Politecnico di Milano
+\end_layout
+
+\begin_layout Title
+A.
+ A.
+ 2016-2017
+\end_layout
+
+\begin_layout Title
+Software Engineering 2: 
+\emph on
+PowerEnjoy
+\end_layout
+
+\begin_layout Title
+
+\series bold
+R
+\series default
+equirements 
+\series bold
+A
+\series default
+nalysis and 
+\series bold
+S
+\series default
+pecifications 
+\series bold
+D
+\series default
+ocument
+\end_layout
+
+\begin_layout Author
+Alessandro Mandelli
+\end_layout
+
+\begin_layout Author
+Andrea Molgora
+\end_layout
+
+\begin_layout Author
+Pietro Morbidelli
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Index
+\end_layout
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Purpose
+\end_layout
+
+\begin_layout Enumerate
+Actual System
+\end_layout
+
+\begin_layout Enumerate
+Scope
+\end_layout
+
+\begin_layout Enumerate
+Actors
+\end_layout
+
+\begin_layout Enumerate
+Goals
+\end_layout
+
+\begin_layout Enumerate
+Definition
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Overall Description
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Product Perspective
+\end_layout
+
+\begin_layout Enumerate
+User Characteristics
+\end_layout
+
+\begin_layout Enumerate
+Documents Related
+\end_layout
+
+\begin_layout Enumerate
+Assumptions and Dependencies
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Specific Requirements
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+External Interface Requirements
+\end_layout
+
+\begin_layout Enumerate
+API Interface
+\end_layout
+
+\begin_layout Enumerate
+Hardware Interface
+\end_layout
+
+\begin_layout Enumerate
+Software Interface
+\end_layout
+
+\begin_layout Enumerate
+Communication Interfaces
+\end_layout
+
+\begin_layout Enumerate
+Functional Requirements
+\end_layout
+
+\begin_layout Enumerate
+Non Functional Requirements
+\end_layout
+
+\begin_layout Enumerate
+Scenarios
+\end_layout
+
+\begin_layout Enumerate
+UML Models
+\end_layout
+
+\begin_layout Enumerate
+Class Diagrams
+\end_layout
+
+\begin_layout Enumerate
+State Machine Diagrams
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Appendix
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Alloy
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Abstract Entity
+\end_layout
+
+\begin_layout Enumerate
+Abstract Entity Implementation and Signature
+\end_layout
+
+\begin_layout Enumerate
+Fact 
+\end_layout
+
+\begin_layout Enumerate
+Assert
+\end_layout
+
+\begin_layout Enumerate
+Predicate
+\end_layout
+
+\begin_layout Enumerate
+Result
+\end_layout
+
+\begin_layout Enumerate
+Generate World
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Tools utilized
+\end_layout
+
+\begin_layout Enumerate
+Hours of work
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Revision
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Purpose
+\end_layout
+
+\begin_layout Standard
+The goal of this document is to analyse the needs of the costumer and to
+ provide a solid solution for them, describe the functional and non functional
+ requirements of the system, show the constraints of the software and reproduce
+ the scenarios and use cases that will likely happen.
+ The document serves as a standard for all the developers that are going
+ to implement the features for the standard software as well as future implement
+ations.
+\end_layout
+
+\begin_layout Subsection
+Actual System
+\end_layout
+
+\begin_layout Standard
+The software is needed to provide an efficient solution for the company
+ PowerEnjoy, which purpose is to grant a car-sharing service.
+ There is no software prior to this and the service is yet to be launched.
+\end_layout
+
+\begin_layout Subsection
+Scope
+\end_layout
+
+\begin_layout Standard
+The aim of the software house is to grant a functioning mobile app that
+ will be used by customers to access the system.
+ Users will search for an available electric car they can use to reach their
+ destination.
+ Users must register to the system providing a valid ID, driving license,
+ and payment information.
+ Once registered, the user can search for a car in his proximity or near
+ a certain address.
+ When they find a suitable car, they can reserve it for a certain amount
+ of time.
+ As the user reaches the car, the system unlocks the car and the user begins
+ his ride.
+ The vehicle is started and the charging process begins – it will finish
+ when the user leaves the car after after having turned it off.
+ Money is received via the payment infos the user provided, and the process
+ ends with the car returning to a 'free' status.
+ This is the standard micro-process of the app, though there are a lot of
+ details left unspecified for now – they will be described through the document.
+\end_layout
+
+\begin_layout Standard
+The system must eventually inform employees if some cars are left by customers
+ with not enough power, so they can pick them up and recharge them on the
+ nearest power station.
+\end_layout
+
+\begin_layout Subsection
+Actors
+\end_layout
+
+\begin_layout Itemize
+Customer: the principal user of the system, has to be logged in in the system
+ to perform any action except the registration.
+\end_layout
+
+\begin_layout Itemize
+Employee – viene avvisato tramite sms con delle coordinate per la macchina
+\end_layout
+
+\begin_layout Subsection
+Goals
+\end_layout
+
+\begin_layout Standard
+List of the principal focus of the system:
+\end_layout
+
+\begin_layout Itemize
+[G1] : Allow users to register to the system.
+\end_layout
+
+\begin_layout Itemize
+[G2] : Allow users to log into the system.
+\end_layout
+
+\begin_layout Itemize
+[G3] : Allow registered users to search for available cars within a certain
+ area.
+\end_layout
+
+\begin_layout Itemize
+[G4] : Manage car reservations requested by users.
+\end_layout
+
+\begin_layout Itemize
+[G5] : Establish an awarding system based on users behaviours.
+\end_layout
+
+\begin_layout Itemize
+[G6] : Grant the access to users when necessary.
+\end_layout
+
+\begin_layout Itemize
+[G7] : Charge users proportionally to the car usage.
+\end_layout
+
+\begin_layout Itemize
+[G8] : Allow users to enter a 
+\emph on
+Money Saving
+\emph default
+ mode.
+\end_layout
+
+\begin_layout Itemize
+[G9] : Grant the cars have a minimun threshold of charge when they pick
+ it up.
+ (aggiunto per la roba dei dipendeti che ricaricano macchine troppo scariche
+ mollate in giro)
+\end_layout
+
+\begin_layout Subsection
+Definitions
+\end_layout
+
+\begin_layout Standard
+non so magari ci serviranno.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Overall Description
+\end_layout
+
+\begin_layout Subsection
+Product Perspective
+\end_layout
+
+\begin_layout Standard
+The product will be a mobile application, integrated with a GPS system and
+ with a payment system.
+ It will rely on a database and will be entirely user-based: the employees
+ will only be contacted via SMS by the system if needed, but they are not
+ going to actually use the app.
+ The software will not provide any API for integration purposes.
+\end_layout
+
+\begin_layout Subsection
+User Characteristics
+\end_layout
+
+\begin_layout Standard
+We expect a user that requires an easy interface for the reservation of
+ the car.
+ The user must have access to Internet and a GPS on his smartphone.
+\end_layout
+
+\begin_layout Subsection
+Documents related
+\end_layout
+
+\begin_layout Itemize
+Requirements and Analysis Speciﬁcation Document (RASD).
+ 
+\end_layout
+
+\begin_layout Itemize
+Design Document (DD).
+\end_layout
+
+\begin_layout Itemize
+User’s Manual.
+\end_layout
+
+\begin_layout Itemize
+Testing report.
+ 
+\end_layout
+
+\begin_layout Subsection
+Domain Assumptions 
+\end_layout
+
+\begin_layout Itemize
+[D1] : All the vehicles involved in the document are PowerEnjoy's property.
+\end_layout
+
+\begin_layout Itemize
+[D2] : Users and cars are traceable by GPS.
+\end_layout
+
+\begin_layout Itemize
+[D3] : All the users presented in the document are registered and logged
+ in, except for where it is explicitly stated the opposite.
+ (OCIOOOOOOOOO)
+\end_layout
+
+\begin_layout Itemize
+[D4] : The set of safe areas for parking cars is pre-defined by the management
+ system.
+\end_layout
+
+\begin_layout Itemize
+in riferimento al goal 1:
+\end_layout
+
+\begin_layout Itemize
+[D5] : In order to grant the identification of users, we assume that all
+ the required information for the registration are authentic.
+\end_layout
+
+\begin_layout Itemize
+[D6] : We assume that registering users always provide valid credentials
+ (email, driving license, payment method).
+\end_layout
+
+\begin_layout Itemize
+[D7] : When the user leaves the car, it means the user is closing the driver's
+ door.
+\end_layout
+
+\begin_layout Itemize
+[D8] : Carseats are equipped with weight sensors.
+ (la gente può cheatare?)
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Specific Requirements
+\end_layout
+
+\begin_layout Subsection
+External Interface Requirements
+\end_layout
+
+\begin_layout Subsubsection
+User Interface
+\end_layout
+
+\begin_layout Standard
+qui mettiamo boh delle schermate o spieghiamo cosa si trova davanti l'utente
+\end_layout
+
+\begin_layout Subsubsection
+API interfaces
+\end_layout
+
+\begin_layout Standard
+The application relies on GoogleMaps API to calculate the nearest car from
+ the user position (https://developers.google.com/maps/) and on the Direct
+ Payment PayPal's API to ensure a safe payment enviroment for the users
+ (https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside).
+ Both the API are really well-known so the user will have no trouble using
+ the service.
+ The system must use SMS to coordinate employees, comunicating the coordinates
+ of the cars via GoogleMap links.
+\end_layout
+
+\begin_layout Subsubsection
+Hardware Limitations
+\end_layout
+
+\begin_layout Paragraph
+User:
+\end_layout
+
+\begin_layout Itemize
+3G/4G connection
+\end_layout
+
+\begin_layout Itemize
+GPS
+\end_layout
+
+\begin_layout Itemize
+Space for the app package
+\end_layout
+
+\begin_layout Paragraph
+Employee:
+\end_layout
+
+\begin_layout Itemize
+GPS
+\end_layout
+
+\begin_layout Itemize
+GoogleMaps installed
+\end_layout
+
+\begin_layout Subsubsection
+Proposed System
+\end_layout
+
+\begin_layout Standard
+disegnino del sistema con DB, user ecc
+\end_layout
+
+\begin_layout Subsection
+Functional Requirements
+\end_layout
+
+\begin_layout Standard
+(da tradurre bene) assumendo che le domain assumptions fatte prima valgono
+ e per raggiungere i requisiti ecc ecc..
+\end_layout
+
+\begin_layout Subsubsection
+[G1] : Allow users to register into the system.
+\end_layout
+
+\begin_layout Itemize
+[R1] : Upon a completed registration, the user receives a password to authentica
+te.
+ <- questo va qui?
+\end_layout
+
+\begin_layout Itemize
+[R2] : Users must not be already registered to the system to perform the
+ registration process.
+\end_layout
+
+\begin_layout Itemize
+[R3] : Each account is linked to one and only one username, driving license.
+\end_layout
+
+\begin_layout Itemize
+[R4] : Upon registration, user must furnish an email, an username, a driving
+ license and a payment method.
+\end_layout
+
+\begin_layout Itemize
+[R5] : Registration cannot be finalised if a user provides an username,
+ email or driving license owned by other users.
+\end_layout
+
+\begin_layout Subsubsection
+[G2] : Allow users to log into the system.
+\end_layout
+
+\begin_layout Itemize
+[R6] : In order to log into the system, the user must be already registered.
+\end_layout
+
+\begin_layout Itemize
+[R7] : Users must provide the correct (fare riferimento a R1?) username
+ and password to complete the login proess.
+\end_layout
+
+\begin_layout Itemize
+[R8] : Access is denied if the user provides wrong credentials.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+[G3] : Allow registered users to search for available cars within a certain
+ area.
+\end_layout
+
+\begin_layout Itemize
+[R9] : Users must be logged into the system in order to search for available
+ cars.
+\end_layout
+
+\begin_layout Itemize
+[R10] : The system allows users to choose whether to perform the search
+ from their current position or a specific address.
+\end_layout
+
+\begin_layout Itemize
+[R11] : The system must be able to recognize the available cars closest
+ to the position provided by the user.
+ (va detto che l'obiettivo è obv quello di farle cattare su dagli utenti?)
+\end_layout
+
+\begin_layout Itemize
+[R12] : The system must keep track of the available cars at any moment in
+ time.
+ // keep track sembra avere un log delle cose per usi futuri? is aware of?
+\end_layout
+
+\begin_layout Itemize
+[R13] : The system must keep track of the location of cars at any moment
+ in time.
+\end_layout
+
+\begin_layout Subsubsection
+[G4] : Manage car reservations requested by users.
+\end_layout
+
+\begin_layout Itemize
+[R14] : The system is able to read the availability status of cars.
+ (dobbiamo specificare qui quali sono gli stati possibili?)
+\end_layout
+
+\begin_layout Itemize
+[R15] : The system is able to change the availability status of cars.
+\end_layout
+
+\begin_layout Itemize
+[R16] : The system keeps track of the status changes of the cars.
+ (da riscrivere, comunque serve per il timer)
+\end_layout
+
+\begin_layout Itemize
+[R17] : 'Available' cars are eligible for the reservation.
+ 
+\end_layout
+
+\begin_layout Itemize
+[R18] : 'Reserved' cars are ready to be picked up.
+\end_layout
+
+\begin_layout Itemize
+[R19] : 'Unavailable' cars are not eligible for the reservation.
+\end_layout
+
+\begin_layout Itemize
+[R20] : 'No-charge' cars are not eligible for the reservation.
+\end_layout
+
+\begin_layout Itemize
+[R21] : Cars below the charge treshold are labelled as 'No-charge'.
+\end_layout
+
+\begin_layout Itemize
+[R21] : Whenever a car enters the 'Reserved' status, a reservation timer
+ is started.
+\end_layout
+
+\begin_layout Itemize
+[R22] : At the end of the reservation timer, the car availability status
+ returns to 'Available'.
+ (sembra un flow di azioni finora?)
+\end_layout
+
+\begin_layout Itemize
+[R23] : Upon request by the user, the system provides a list of the nearby
+ available cars.
+ (nearby include entrambi i casi della scelta current position/specific
+ address?)
+\end_layout
+
+\begin_layout Itemize
+[R24] : The system allows users to choose one vehicle among the proposed
+ available cars.
+\end_layout
+
+\begin_layout Itemize
+[R25] : When an available car is chosen by the user, the system labels the
+ car as 'Reserved' for a certain duration.
+ (ehehe, la durata è un req non funz paraparapunz?)
+\end_layout
+
+\begin_layout Itemize
+[R26] : Reserved cars exceeding the reservation timer award a penalty fee
+ to the user reserving the car.
+ 
+\end_layout
+
+\begin_layout Itemize
+[R27] : Reserved cars picked-up within the reservation timer are labelled
+ as 'Unavailable'.
+\end_layout
+
+\begin_layout Itemize
+[R28] : When the user leaves the car, the car availability status changes
+ to 'Available' or 'No-charge', based on the current level of battery.
+\end_layout
+
+\begin_layout Subsubsection
+[G5] : Establish an awarding system based on users behaviours.
+\end_layout
+
+\begin_layout Itemize
+[R29] : The system is able to receive data from cars.
+\end_layout
+
+\begin_layout Itemize
+[R30] : The system is able to elaborate data received from cars.
+\end_layout
+
+\begin_layout Itemize
+[R31] : The system is able to apply discount or additional fees to users.
+\end_layout
+
+\begin_layout Itemize
+[R32] : Discounts are not cumulable, when more than one discount are triggered,
+ only the largest one is applied.
+\end_layout
+
+\begin_layout Itemize
+[R33] : Additional fees are not cumulable, when more than one additional
+ fee are triggered, only the largest one is applied.
+\end_layout
+
+\begin_layout Itemize
+[R34] : If two or more additional passengers are detected onto a car, the
+ system applies a 10% discount on the last ride.
+ ( 10% non functional requirement?)
+\end_layout
+
+\begin_layout Itemize
+[R35] : If a car is left with at least 50% of the battery, the system applies
+ a 20% discount on the last ride.
+ (come sopra)
+\end_layout
+
+\begin_layout Itemize
+[R36] : If a car is left plugged at xxx, the system applies a discount of
+ 30% on the last ride.
+ (^)
+\end_layout
+
+\begin_layout Itemize
+[R37] : The system is able to recognize the closest power grid station 
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+[G6] : Grant the access to users when necessary.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must be able to operate remotely on the cars.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : Unless an user or an employee unlocks the car, it remains locked.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : Employees can unlock unreserved cars for maintenance.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must unlock a car only when the user who reserved it
+ approaches.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must detect when the user exits the car.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The car must be locked when it is parked in a safe place and the
+ user exits it.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user must not be able to unlock a car that he/she hasn't reserved.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+[G7] : Charge users proportionally to the car usage.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must know if a car is running.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must start charging the user as soon as the engine ignites.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must keep track of the current charge of a car in use.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must charge the user with a given amount of money per
+ minute.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user must be notified in real-time of the current charge.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must stop charging the user when the car is parked in
+ a safe area and the user exits the vehicle.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must know the discounts a user has earned.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : At the end of the ride, the system must apply the greater discount
+ among the ones earned by the user.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user is charged according to the chosen payment method.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+[G8] : Allow users to enter a 
+\emph on
+Money Saving
+\emph default
+ mode.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : At every time the system must know the availability of the power
+ plugs at every charging station.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The user must be able to communicate his destination to the system.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must grant an equal distribution of the cars.
+
+\color red
+ 
+\color black
+//Troppo generico..
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must choose a charging station with at least one available
+ power plug.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must let the user know the charging station where to
+ leave the car in order to get the discount.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The chosen charging sttion must be no further than 1.5km from the
+ user destination.
+
+\color red
+ 
+\color black
+//Distanza non necessaria/scorretto metterla qui?
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+[G9] : Grant the cars have a minimun threshold of charge when they pick
+ it up.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : The system must be able to keep track of the battery level of every
+ car.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : If a car has a battery charge below the threshold it is not reservable.
+\end_layout
+
+\begin_layout Itemize
+[Rxx] : Whenever a certain car reaches the battery treshold, when it is
+ parked, the nearest employee is notified with a SMS communicating the location
+ of the car (via GoogleMaps link).
+\end_layout
+
+\end_body
+\end_document
