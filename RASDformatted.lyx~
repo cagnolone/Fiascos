@@ -406,7 +406,7 @@ Money Saving
 
 \begin_layout Itemize
 [G9] : Grant the cars have a minimun threshold of charge when they pick
- it up.
+ them up.
  (aggiunto per la roba dei dipendeti che ricaricano macchine troppo scariche
  mollate in giro)
 \end_layout
@@ -481,7 +481,7 @@ Domain Assumptions
 \end_layout
 
 \begin_layout Itemize
-[D2] : Users and cars are traceable by GPS.
+[D2] : Users, cars and employees are traceable by GPS.
 \end_layout
 
 \begin_layout Itemize
@@ -499,6 +499,7 @@ Domain Assumptions
 in riferimento al goal 1:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 [D5] : In order to grant the identification of users, we assume that all
  the required information for the registration are authentic.
@@ -509,6 +510,7 @@ in riferimento al goal 1:
  (email, driving license, payment method).
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 [D7] : When the user leaves the car, it means the user is closing the driver's
  door.
@@ -517,6 +519,24 @@ in riferimento al goal 1:
 \begin_layout Itemize
 [D8] : Carseats are equipped with weight sensors.
  (la gente può cheatare?)
+\end_layout
+
+\begin_layout Itemize
+[D9] : Cars are equipped with a GPS navigator .
+\end_layout
+
+\begin_layout Itemize
+[D10]: Employee are given keys to unlock cars manually, due to prevent a
+ fail of the car electronic system.
+\end_layout
+
+\begin_layout Itemize
+[D11] : All the GPS always give the right position.
+\end_layout
+
+\begin_layout Itemize
+[D12]: Power station are equipped with a portable generator the employees
+ can use to recharge cars on-site.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -806,9 +826,9 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R36] : If a car is left plugged at xxx, the system applies a discount of
- 30% on the last ride.
- (^)
+[R36] : If a car is left plugged into a power grid, the system applies a
+ discount of 30% on the last ride.
+ (^) DOBBIAMO DEFINIRE come+ IL SISTEMA RICONOSCE UN PLUG IN DELL'UTENTE
 \end_layout
 
 \begin_layout Itemize
@@ -830,33 +850,33 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must be able to operate remotely on the cars.
+[R39] : The system must be able to operate remotely on the cars.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Unless an user or an employee unlocks the car, it remains locked.
+[R40] : Unless an user or an employee unlocks the car, it remains locked.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Employees can unlock unreserved cars for maintenance.
+[R41] : Employees can unlock unreserved cars for maintenance.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must unlock a car only when the user who reserved it
+[R42] : The system must unlock a car only when the user who reserved it
  approaches.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must detect when the user exits the car.
+[R43] : The system must detect when the user exits the car.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The car must be locked when it is parked in a safe place and the
+[R44] : The car must be locked when it is parked in a safe place and the
  user exits it.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user must not be able to unlock a car that he/she hasn't reserved.
+[R45] : The user must not be able to unlock a car that he/she hasn't reserved.
 \end_layout
 
 \begin_layout Subsubsection
@@ -866,42 +886,42 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must know if a car is running.
+[R46] : The system must know if a car is running.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must start charging the user as soon as the engine ignites.
+[R47] : The system must start charging the user as soon as the engine ignites.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must keep track of the current charge of a car in use.
+[R48] : The system must keep track of the current charge of a car in use.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must charge the user with a given amount of money per
+[R49] : The system must charge the user with a given amount of money per
  minute.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user must be notified in real-time of the current charge.
+[R50] : The user must be notified in real-time of the current charge.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must stop charging the user when the car is parked in
+[R51] : The system must stop charging the user when the car is parked in
  a safe area and the user exits the vehicle.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must know the discounts a user has earned.
+[R52] : The system must know the discounts a user has earned.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : At the end of the ride, the system must apply the greater discount
+[R53] : At the end of the ride, the system must apply the greater discount
  among the ones earned by the user.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user is charged according to the chosen payment method.
+[R54] : The user is charged according to the chosen payment method.
 \end_layout
 
 \begin_layout Subsubsection
@@ -915,41 +935,44 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : At every time the system must know the availability of the power
+[R55] : At every time the system must know the availability of the power
  plugs at every charging station.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The user must be able to communicate his destination to the system.
+[R56] : The user must be able to communicate his destination to the system.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must grant an equal distribution of the cars.
-
-\color red
- 
+[R57] : The system must 
 \color black
-//Troppo generico..
+suggest the user a power grid taking into account the position of cars around
+ the area and trying to create an equal distribution of them.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must choose a charging station with at least one available
+[R58] : The system must choose a charging station with at least one available
  power plug.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must let the user know the charging station where to
+[R59] : The system must let the user know the charging station where to
  leave the car in order to get the discount.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The chosen charging sttion must be no further than 1.5km from the
+[R60] : The chosen charging sttion must be no further than 1.5km from the
  user destination.
 
 \color red
  
 \color black
 //Distanza non necessaria/scorretto metterla qui?
+\end_layout
+
+\begin_layout Itemize
+[R61] : If the user leaves the car at the indicated charging station and
+ connects the plug, he receives a discount.
 \end_layout
 
 \begin_layout Subsubsection
@@ -960,18 +983,288 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : The system must be able to keep track of the battery level of every
+[R62] : The system must be able to keep track of the battery level of every
  car.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : If a car has a battery charge below the threshold it is not reservable.
+[R63] : If a car has a battery charge below the threshold it is not reservable.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Whenever a certain car reaches the battery treshold, when it is
- parked, the nearest employee is notified with a SMS communicating the location
- of the car (via GoogleMaps link).
+[R64] : Whenever a certain car reaches the battery treshold, when it is
+ parked further than 3km froma power station, the nearest employee is notified
+ with a SMS communicating the location of the car (via GoogleMaps link).
+\end_layout
+
+\begin_layout Itemize
+[R65] : The notified employee must reach the car and recharge it with a
+ portable generator.
+\end_layout
+
+\begin_layout Itemize
+[R66] : The employee must recharge a car if a user leaves it in the power
+ station without plugging it into the grid.
+\end_layout
+
+\begin_layout Subsection
+Scenarios
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Scenario 1: App download and registration.
+\end_layout
+
+\begin_layout Standard
+Bob has heard of the new car-sharing company 
+\shape italic
+
+\begin_inset Quotes eld
+\end_inset
+
+PowerEnjoy
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape default
+and he wants to use this service.
+ He has an android phone, so he searches in the Google Play Store for the
+\shape italic
+ PowerEnjoy
+\shape default
+ app and downloads it.
+ Bob opens the app, that shows the log in/registration screen.
+ Since he is a new costumer, he clicks on the registration button, and the
+ app shows him the registration form, with username, cellphone number, email
+ address, driving license and payment method fields.
+ He fills in all the fields, the data are sent to the system that checks
+ if they aren't already used, then the app notifies that the registration
+ is complete.
+ the system saves the new account in the database and sends Bob a confirmation
+ email containing the password he must use to log in.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Scenario 2: Log in and car reservation.
+\end_layout
+
+\begin_layout Standard
+Bob has to go to his friend, who lives 10km far from him, but he doesn't
+ want to take the subway, instead he wants to use the 
+\shape italic
+PowerEnjoy
+\shape default
+ service.
+ He opens the previously downloaded app on his smartphone, fills in the
+ username and password fields with his credentials and clicks the login
+ button.
+ The system checks the correctness of the data, then allows the login process.
+ The app shows Bob the home screen, where he can choose from various options.
+ Bob clicks on the 
+\begin_inset Quotes eld
+\end_inset
+
+Search cars by position
+\begin_inset Quotes erd
+\end_inset
+
+ option, since he wants to find a nearby car.
+ the system processes the request, sends the list of available cars and
+ the app shows them on a map screen.
+ Bob chooses the nearest car clicking on it, and the app shows a confirmation
+ request popup.
+ Bob clicks on the confirmation button and the request is processed by the
+ system, that changes its status from 
+\emph on
+available
+\emph default
+ to 
+\emph on
+reserved
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 3: Typical Car usage.
+\end_layout
+
+\begin_layout Standard
+Karen reserved her car 15 minutes ago, and she just reached its position.
+ When she's next to the car, she opens the app and after logging in she
+ asks to open her reserved car.
+ The system checks if her GPS and the car GPS give the same results, and
+ unlocks the car.
+ She enters the vehicle and starts the engine: the system now starts to
+ charge money to Karen and change the car's status from 
+\emph on
+reserved
+\emph default
+ to 
+\emph on
+unavailable.
+ 
+\emph default
+She drives to her destination and then she parks in a safe area.
+ She stops and exit the vehicle: the system stops charging the user and
+ proceed to check the battery level, which is above 50%: Karen receives
+ a 20% discount and the payment is now pending in her account waiting for
+ the services to be processed.
+ The status of the car goes from 
+\emph on
+unavailable 
+\emph default
+to 
+\emph on
+available
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 4: Sharing the car to obtain a discount.
+\end_layout
+
+\begin_layout Standard
+Daniel, Mike and Carl want to go to the stadium but the train is way too
+ expensive so they decide to rent a car using the 
+\emph on
+PowerEnjoy 
+\emph default
+service to save some money.
+ After Daniel logged in the service using the app, they search for a car
+ near Carl's house using his address and they reserve a car, which status
+ in the system goes from 
+\emph on
+available
+\emph default
+ to 
+\emph on
+reserved
+\emph default
+.
+ They reach it and start their trip, and the system changes the car's status
+ from 
+\emph on
+reserved
+\emph default
+ to 
+\emph on
+unavailable
+\emph default
+.
+ The electronic car system recognizes that Daniel is not alone with his
+ weight-sensor under the other seats and informs the system that there are
+ other 2 passengers.
+ When they reach the stadium, they leave the car in a safe park area with
+ 40% battery left.
+ The system charges Daniel a 10% discount because there were 3 passengers
+ in the vehicle, and the vehicle status changes from 
+\emph on
+unavailable
+\emph default
+ to 
+\emph on
+available
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 5: Saving Money option.
+\end_layout
+
+\begin_layout Standard
+Chris wants to go to a museum but he is short on money, so after logging
+ in the application he chooses the 
+\begin_inset Quotes eld
+\end_inset
+
+Money Saving option
+\begin_inset Quotes erd
+\end_inset
+
+ where the system asks him where he wants to go.
+ After submitting the address of the museum, the system checks how many
+ power grid with at least 1 free plug are near the address and the ones
+ eligible to mantain, as long as possibile, an equal distribution of the
+ cars, so that they are not all clumped up in a certain area while leaving
+ free most of the others.
+ Chris takes a look at the proposed stations and save the address of the
+ one he chooses: he will drive to that one and will plug the car in the
+ station, so that the after the system has recognized that the user plugged
+ in the vehicle, it will apply a 30% discount.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 6A: Bad user behaviour.
+\end_layout
+
+\begin_layout Standard
+Nicole has reserved and picked up a car (with obvious system car's state
+ changes, 
+\emph on
+available
+\emph default
+ to 
+\emph on
+reserved
+\emph default
+ and 
+\emph on
+reserved
+\emph default
+ to 
+\emph on
+unavailable
+\emph default
+), but while she was driving to her destination, she notices that the battery
+ is running quite low.
+ Unfortunately, if she make a deviation or park far from the building where
+ she has the appointment, she'll be very late and she can't afford that.
+ So she leaves the car more than 3km away from a power station only with
+ 15% battery left! The system calculates the minimum distance from a power
+ station and the battery level of the car: noticing it breaks the behaviour's
+ rule, it charges 30% more to Nicole and change the car status from 
+\emph on
+unavailable 
+\emph default
+to 
+\emph on
+out of battery
+\emph default
+ and sends an SMS to the nearest employee.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 6B: Car recharged by Employee
+\end_layout
+
+\begin_layout Standard
+The system, after changing the car status to 
+\emph on
+out of battery, 
+\emph default
+searches for the nearest employee and sends him an SMS with a link to the
+ coordinates of the car using GoogleMaps.
+ The Employee receives the SMS and opens the Maps: he will drive to the
+ car and unlock it with his keys, that grant him the access without asking
+ the system.
+ He will then plug the car to a portable generator he brought with him.
+ The system will change the car status when the battery reaches 80% from
+ 
+\emph on
+out of battery 
+\emph default
+to
+\emph on
+ available.
+ 
 \end_layout
 
 \end_body
