@@ -512,6 +512,11 @@ in riferimento al goal 1:
 \begin_layout Itemize
 [D7] : When the user leaves the car, it means the user is closing the driver's
  door.
+\end_layout
+
+\begin_layout Itemize
+[D8] : Carseats are equipped with weight sensors.
+ (la gente può cheatare?)
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -762,10 +767,66 @@ te.
  to 'Available' or 'No-charge', based on the current level of battery.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
+[G5] : Establish an awarding system based on users behaviours.
+\end_layout
+
+\begin_layout Itemize
+[R29] : The system is able to receive data from cars.
+\end_layout
+
+\begin_layout Itemize
+[R30] : The system is able to elaborate data received from cars.
+\end_layout
+
+\begin_layout Itemize
+[R31] : The system is able to apply discount or additional fees to users.
+\end_layout
+
+\begin_layout Itemize
+[R32] : Discounts are not cumulable, when more than one discount are triggered,
+ only the largest one is applied.
+\end_layout
+
+\begin_layout Itemize
+[R33] : Additional fees are not cumulable, when more than one additional
+ fee are triggered, only the largest one is applied.
+\end_layout
+
+\begin_layout Itemize
+[R34] : If two or more additional passengers are detected onto a car, the
+ system applies a 10% discount on the last ride.
+ ( 10% non functional requirement?)
+\end_layout
+
+\begin_layout Itemize
+[R35] : If a car is left with at least 50% of the battery, the system applies
+ a 20% discount on the last ride.
+ (come sopra)
+\end_layout
+
+\begin_layout Itemize
+[R36] : If a car is left plugged at xxx, the system applies a discount of
+ 30% on the last ride.
+ (^)
+\end_layout
+
+\begin_layout Itemize
+[R37] : The system is able to calculate the distance from the closest power
+ grid station to a given car in any moment in time.
+\end_layout
+
+\begin_layout Itemize
+[R38] : If a car is left with less than 20% of battery at a distance greater
+ than 3km from the closest power grid station, the system applies a 30%
+ additional fee on the last ride.
+ (come sopra)
+\end_layout
+
+\begin_layout Subsubsection
 
 \series bold
-3.2.6 [G6] : Grant the access to users when necessary.
+[G6] : Grant the access to users when necessary.
 \end_layout
 
 \begin_layout Itemize
@@ -798,10 +859,10 @@ te.
 [Rxx] : The user must not be able to unlock a car that he/she hasn't reserved.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 
 \series bold
-3.2.7 [G7] : Charge users proportionally to the car usage.
+[G7] : Charge users proportionally to the car usage.
 \end_layout
 
 \begin_layout Itemize
@@ -843,10 +904,10 @@ te.
 [Rxx] : The user is charged according to the chosen payment method.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 
 \series bold
-3.2.8 [G8] : Allow users to enter a 
+[G8] : Allow users to enter a 
 \emph on
 Money Saving
 \emph default
@@ -891,10 +952,10 @@ Money Saving
 //Distanza non necessaria/scorretto metterla qui?
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 
 \series bold
-3.2.9 [G9] : Grant the cars have a minimun threshold of charge when they pick
+[G9] : Grant the cars have a minimun threshold of charge when they pick
  it up.
 \end_layout
 
