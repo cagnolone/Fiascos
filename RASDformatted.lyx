@@ -71,24 +71,40 @@
 \begin_body
 
 \begin_layout Title
-Politecnico di Milano
-\end_layout
+\begin_inset Graphics
+	filename C:/Users/Alessandro/Dropbox/fiascos/Logo polimi.png
+	lyxscale 20
+	scale 20
 
-\begin_layout Title
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 A.
  A.
  2016-2017
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Title
+
+\begin_inset Newline newline
+\end_inset
+
 Software Engineering 2: 
 \emph on
 PowerEnjoy
-\end_layout
-
-\begin_layout Title
-
 \series bold
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 R
 \series default
 equirements 
@@ -108,18 +124,22 @@ ocument
 
 \begin_layout Author
 Alessandro Mandelli
-\end_layout
-
-\begin_layout Author
-Andrea Molgora
-\end_layout
-
-\begin_layout Author
-Pietro Morbidelli
-\begin_inset Newpage pagebreak
+\begin_inset Newline newline
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+Andrea Molgora
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Pietro Morbidelli
 \end_layout
 
 \begin_layout Part*
@@ -127,7 +147,19 @@ Index
 \end_layout
 
 \begin_layout Enumerate
-Introduction
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperref[sec:Introduction]{Introduction}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -564,10 +596,23 @@ API interfaces
 \end_layout
 
 \begin_layout Standard
-The application relies on GoogleMaps API to calculate the nearest car from
- the user position (https://developers.google.com/maps/) and on the Direct
- Payment PayPal's API to ensure a safe payment enviroment for the users
- (https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside).
+The application relies on 
+\begin_inset CommandInset href
+LatexCommand href
+name "GoogleMaps API"
+target "https://developers.google.com/maps/"
+
+\end_inset
+
+ to calculate the nearest car from the user position and on the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Direct Payment PayPal's API"
+target "https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside"
+
+\end_inset
+
+ to ensure a safe payment enviroment for the users.
  Both the API are really well-known so the user will have no trouble using
  the service.
  The system must use SMS to coordinate employees, comunicating the coordinates
