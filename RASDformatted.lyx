@@ -142,20 +142,21 @@ Andrea Molgora
 Pietro Morbidelli
 \end_layout
 
+\begin_layout Date
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part*
 Index
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hyperref[sec:Introduction]{Introduction}
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Introduction"
 
 \end_inset
 
@@ -164,79 +165,189 @@ hyperref[sec:Introduction]{Introduction}
 
 \begin_deeper
 \begin_layout Enumerate
-Purpose
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Purpose"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Actual System
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Actual-System"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Scope
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Scope"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Actors
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Actors"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Goals
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Goals"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Definition
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Definitions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Overall-Description"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Overall Description
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Product-Perspective"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Product Perspective
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:User-Characteristics"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-User Characteristics
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Documents-related"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Documents Related
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Domain-Assumptions"
 
-\begin_layout Enumerate
-Assumptions and Dependencies
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Specific Requirements
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Specific-Requirements"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-External Interface Requirements
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:External-Interface-Requirements"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:API-interfaces"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-API Interface
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Hardware-Limitations"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Hardware Interface
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:User-Interface"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Software Interface
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Proposed-System"
+
+\end_inset
+
+
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
-Communication Interfaces
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Functional-Requirements"
 
-\begin_layout Enumerate
-Functional Requirements
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -244,15 +355,33 @@ Non Functional Requirements
 \end_layout
 
 \begin_layout Enumerate
-Scenarios
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Scenarios"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-UML Models
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:UML-Models"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Class Diagrams
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Use-Case"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -320,11 +449,24 @@ Revision
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction"
+
+\end_inset
+
 Introduction
 \end_layout
 
 \begin_layout Subsection
 Purpose
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Purpose"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -338,6 +480,12 @@ ations.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Actual-System"
+
+\end_inset
+
 Actual System
 \end_layout
 
@@ -348,6 +496,12 @@ The software is needed to provide an efficient solution for the company
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Scope"
+
+\end_inset
+
 Scope
 \end_layout
 
@@ -379,6 +533,12 @@ The system must eventually inform employees if some cars are left by customers
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Actors"
+
+\end_inset
+
 Actors
 \end_layout
 
@@ -392,6 +552,12 @@ Employee – viene avvisato tramite sms con delle coordinate per la macchina
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Goals"
+
+\end_inset
+
 Goals
 \end_layout
 
@@ -444,6 +610,12 @@ Money Saving
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Definitions"
+
+\end_inset
+
 Definitions
 \end_layout
 
@@ -456,10 +628,22 @@ non so magari ci serviranno.
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Overall-Description"
+
+\end_inset
+
 Overall Description
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Product-Perspective"
+
+\end_inset
+
 Product Perspective
 \end_layout
 
@@ -473,6 +657,12 @@ The product will be a mobile application, integrated with a GPS system and
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:User-Characteristics"
+
+\end_inset
+
 User Characteristics
 \end_layout
 
@@ -483,6 +673,12 @@ We expect a user that requires an easy interface for the reservation of
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Documents-related"
+
+\end_inset
+
 Documents related
 \end_layout
 
@@ -505,6 +701,12 @@ Testing report.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Domain-Assumptions"
+
+\end_inset
+
 Domain Assumptions 
 \end_layout
 
@@ -576,14 +778,32 @@ in riferimento al goal 1:
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Specific-Requirements"
+
+\end_inset
+
 Specific Requirements
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:External-Interface-Requirements"
+
+\end_inset
+
 External Interface Requirements
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:User-Interface"
+
+\end_inset
+
 User Interface
 \end_layout
 
@@ -592,6 +812,12 @@ qui mettiamo boh delle schermate o spieghiamo cosa si trova davanti l'utente
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:API-interfaces"
+
+\end_inset
+
 API interfaces
 \end_layout
 
@@ -620,6 +846,12 @@ target "https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside"
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Hardware-Limitations"
+
+\end_inset
+
 Hardware Limitations
 \end_layout
 
@@ -652,6 +884,12 @@ GoogleMaps installed
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Proposed-System"
+
+\end_inset
+
 Proposed System
 \end_layout
 
@@ -660,6 +898,12 @@ disegnino del sistema con DB, user ecc
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Functional-Requirements"
+
+\end_inset
+
 Functional Requirements
 \end_layout
 
@@ -1053,6 +1297,12 @@ suggest the user a power grid taking into account the position of cars around
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Scenarios"
+
+\end_inset
+
 Scenarios
 \end_layout
 
@@ -1317,10 +1567,22 @@ and the employee will return to the power station where he's assigned.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:UML-Models"
+
+\end_inset
+
 UML Models
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Use-Case"
+
+\end_inset
+
 Use Case
 \end_layout
 
@@ -1574,7 +1836,7 @@ Exception
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /Users/Pietro/Downloads/uc-login-4.png
+	filename C:/Users/Pietro/Downloads/uc-login-4.png
 	lyxscale 50
 
 \end_inset
