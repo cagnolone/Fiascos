@@ -564,10 +564,23 @@ API interfaces
 \end_layout
 
 \begin_layout Standard
-The application relies on GoogleMaps API to calculate the nearest car from
- the user position (https://developers.google.com/maps/) and on the Direct
- Payment PayPal's API to ensure a safe payment enviroment for the users
- (https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside).
+The application relies on 
+\begin_inset CommandInset href
+LatexCommand href
+name "GoogleMaps API"
+target "https://developers.google.com/maps/"
+
+\end_inset
+
+ to calculate the nearest car from the user position and on the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Direct Payment PayPal's API"
+target "https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside"
+
+\end_inset
+
+ to ensure a safe payment enviroment for the users.
  Both the API are really well-known so the user will have no trouble using
  the service.
  The system must use SMS to coordinate employees, comunicating the coordinates
@@ -1263,7 +1276,11 @@ out of battery
 \emph default
 to
 \emph on
- available.
+ available, 
+\emph default
+and the employee will return to the power station where he's assigned.
+
+\emph on
  
 \end_layout
 
