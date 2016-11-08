@@ -1065,6 +1065,10 @@ te.
 \end_layout
 
 \begin_layout Itemize
+[Rxx] : Users can not reserve a car if they have a pending payment request.
+\end_layout
+
+\begin_layout Itemize
 [R14] : The system is able to read the availability status of cars.
  (dobbiamo specificare qui quali sono gli stati possibili?)
 \end_layout
@@ -2637,7 +2641,7 @@ Exception
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="1">
+<lyxtabular version="3" rows="4" columns="1">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="50page%">
 <row>
@@ -2665,12 +2669,28 @@ Exception
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ The user does not reach the car within the given time.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 All the exceptions are handled by showing the user an error message and
  returning to the home screen of the app.
+ Exception 3 is handled also by charging the user with a fee and changing
+ the status of the car to 
+\shape italic
+available.
 \end_layout
 
 \end_inset
