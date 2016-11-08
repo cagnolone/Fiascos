@@ -548,7 +548,8 @@ Customer: the principal user of the system, has to be logged in in the system
 \end_layout
 
 \begin_layout Itemize
-Employee – viene avvisato tramite sms con delle coordinate per la macchina
+Employee: is notified by the system if there are any car out of battery
+ not near a power grid station.
 \end_layout
 
 \begin_layout Subsection
@@ -605,8 +606,7 @@ Money Saving
 \begin_layout Itemize
 [G9] : Grant the cars have a minimun threshold of charge when they pick
  them up.
- (aggiunto per la roba dei dipendeti che ricaricano macchine troppo scariche
- mollate in giro)
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -619,8 +619,49 @@ name "subsec:Definitions"
 Definitions
 \end_layout
 
-\begin_layout Standard
-non so magari ci serviranno.
+\begin_layout Itemize
+RASD: Requirements Analysis and Specification Document.
+ 
+\end_layout
+
+\begin_layout Itemize
+DB: DataBase.
+\end_layout
+
+\begin_layout Itemize
+DBMS: DataBase management system.
+ 
+\end_layout
+
+\begin_layout Itemize
+API: Application Programming Interface.
+ 
+\end_layout
+
+\begin_layout Itemize
+OS: Operating System.
+\end_layout
+
+\begin_layout Itemize
+[Gn]: n-goal.
+ 
+\end_layout
+
+\begin_layout Itemize
+[Rn]: n-functional requirement.
+ 
+\end_layout
+
+\begin_layout Itemize
+[Dn]: n-domain assumption.
+\end_layout
+
+\begin_layout Itemize
+GPS: Global Positioning System.
+\end_layout
+
+\begin_layout Itemize
+SMS: Short Message Service.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -730,11 +771,6 @@ Domain Assumptions
 \end_layout
 
 \begin_layout Itemize
-in riferimento al goal 1:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
 [D5] : In order to grant the identification of users, we assume that all
  the required information for the registration are authentic.
 \end_layout
@@ -744,7 +780,6 @@ in riferimento al goal 1:
  (email, driving license, payment method).
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 [D7] : When the user leaves the car, it means the user is closing the driver's
  door.
@@ -807,8 +842,41 @@ name "subsec:User-Interface"
 User Interface
 \end_layout
 
+\begin_layout Paragraph
+3.1.1.1 App Modules
+\end_layout
+
 \begin_layout Standard
-qui mettiamo boh delle schermate o spieghiamo cosa si trova davanti l'utente
+This is a prototype version of the app modules, regarding login form, registrati
+on form, and homescreen.
+\end_layout
+
+\begin_layout Standard
+//immagine
+\end_layout
+
+\begin_layout Paragraph
+3.1.1.2 Car Reservation
+\end_layout
+
+\begin_layout Standard
+This is a prototype version of the vehicle search/reservation module.
+\end_layout
+
+\begin_layout Standard
+//immagine
+\end_layout
+
+\begin_layout Paragraph
+3.1.1.3 Money Saving mode
+\end_layout
+
+\begin_layout Standard
+This is a prototype version of the MoneySaving option.
+\end_layout
+
+\begin_layout Standard
+//immagine
 \end_layout
 
 \begin_layout Subsubsection
@@ -2122,7 +2190,245 @@ Exception
 \end_layout
 
 \begin_layout Subparagraph
-3.4.1.3 
+3.4.1.3 Car Reservation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[G3]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Input Condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user is logged into the system
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Event Flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.The user chooses to search a car by his position or by an address
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.The system search 
+\emph on
+available
+\emph default
+ cars in theuser proposed area.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ The user selects a car from the proposed cars
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.The system ask for confirmation about the selected car
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.The user confirms the selected car
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.The system change the car status from 
+\emph on
+available
+\emph default
+ to 
+\emph on
+reserved
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output Condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user has reserved a car
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exception
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+If the user cancels the operation the system redirects him to the home screen
+ of the app.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -2375,6 +2681,233 @@ All the exceptions are handled by showing the user an error message and
 \end_inset
 
  
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+3.4.1.5
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[G8]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Input Condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user already reserved a car
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Event Flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.The user request the system to activate the money saving option, and submits
+ his destination.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.The system checks if there is a power station with at least one free plug
+ that ensures an equal distribution of the cars.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ The system shows the user the eligible stations and save them into the
+ database.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+ The user drives to one of the power stations and plugs in the car.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.The system elaborates if the station where he ended the ride is in the
+ set of the proposed ones and if the user actually plugged in the car.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output Condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System will apply the bonus in the payment process
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exception
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+If the user does not drive to the station, does not plug in the car, or
+ does not pick up the reserved car, the bonus is not applied.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
