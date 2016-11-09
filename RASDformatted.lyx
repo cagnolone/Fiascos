@@ -72,7 +72,7 @@
 
 \begin_layout Title
 \begin_inset Graphics
-	filename C:/Users/Alessandro/Dropbox/fiascos/Logo polimi.png
+	filename diagrams/Logo polimi.png
 	lyxscale 20
 	scale 20
 
@@ -542,14 +542,26 @@ name "subsec:Actors"
 Actors
 \end_layout
 
-\begin_layout Itemize
-Customer: the principal user of the system, has to be logged in in the system
- to perform any action except the registration.
+\begin_layout Standard
+There are two actors in the system:
 \end_layout
 
 \begin_layout Itemize
-Employee: is notified by the system if there are any car out of battery
- not near a power grid station.
+
+\series bold
+Customer
+\series default
+: the principal user of the system, has to be logged in in the system to
+ perform any action except the registration.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Employee
+\series default
+: is notified by the system if there are any car out of battery not near
+ a power grid station.
 \end_layout
 
 \begin_layout Subsection
@@ -857,7 +869,35 @@ on form, and homescreen.
 \end_layout
 
 \begin_layout Standard
-//immagine
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Unnumbered
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mockup/appmodulesfinal.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -869,7 +909,35 @@ This is a prototype version of the vehicle search/reservation module.
 \end_layout
 
 \begin_layout Standard
-//immagine
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Unnumbered
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mockup/carselection.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -881,7 +949,35 @@ This is a prototype version of the MoneySaving option.
 \end_layout
 
 \begin_layout Standard
-//immagine
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Unnumbered
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mockup/money saving option.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -953,8 +1049,9 @@ Functional Requirements
 \end_layout
 
 \begin_layout Standard
-(da tradurre bene) assumendo che le domain assumptions fatte prima valgono
- e per raggiungere i requisiti ecc ecc..
+In order to grant the Goals described in paragraph X, we derive the following
+ requirements from the Domain Assumptions listed above (paragrafo da mettere
+ qua).
 \end_layout
 
 \begin_layout Subsubsection
@@ -991,16 +1088,16 @@ Functional Requirements
 \end_layout
 
 \begin_layout Itemize
-[R6] : In order to log into the system, the user must be already registered.
+[R1] : In order to log into the system, the user must be already registered.
 \end_layout
 
 \begin_layout Itemize
-[R7] : Users must provide the correct (fare riferimento a R1?) username
+[R2] : Users must provide the correct (fare riferimento a R1?) username
  and password to complete the login proess.
 \end_layout
 
 \begin_layout Itemize
-[R8] : Access is denied if the user provides wrong credentials.
+[R3] : Access is denied if the user provides wrong credentials.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1011,29 +1108,29 @@ Functional Requirements
 \end_layout
 
 \begin_layout Itemize
-[R9] : Customers must be logged into the system in order to search for available
+[R1] : Customers must be logged into the system in order to search for available
  cars.
 \end_layout
 
 \begin_layout Itemize
-[R10] : The system allows clients to choose whether to perform the search
+[R2] : The system allows clients to choose whether to perform the search
  from their current position or a specific address.
 \end_layout
 
 \begin_layout Itemize
-[R11] : The system must be able to recognize the available cars closest
- to the position provided by the customer.
+[R3] : The system must be able to recognize the available cars closest to
+ the position provided by the customer.
  (va detto che l'obiettivo è obv quello di farle cattare su dagli utenti?)
 \end_layout
 
 \begin_layout Itemize
-[R12] : The system must keep track of the available cars at any moment in
+[R4] : The system must keep track of the available cars at any moment in
  time.
  // keep track sembra avere un log delle cose per usi futuri? is aware of?
 \end_layout
 
 \begin_layout Itemize
-[R13] : The system must keep track of the location of cars at any moment
+[R5] : The system must keep track of the location of cars at any moment
  in time.
 \end_layout
 
@@ -1042,86 +1139,86 @@ Functional Requirements
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Customers can not reserve a car if they have a pending payment request.
+[R1] : Customers can not reserve a car if they have a pending payment request.
 \end_layout
 
 \begin_layout Itemize
-[R14] : The system is able to read the availability status of cars.
+[R2] : The system is able to read the availability status of cars.
  (dobbiamo specificare qui quali sono gli stati possibili?)
 \end_layout
 
 \begin_layout Itemize
-[R15] : The system is able to change the availability status of cars.
+[R3] : The system is able to change the availability status of cars.
 \end_layout
 
 \begin_layout Itemize
-[R16] : The system keeps track of the status changes of the cars.
+[R4] : The system keeps track of the status changes of the cars.
  (da riscrivere, comunque serve per il timer)
 \end_layout
 
 \begin_layout Itemize
-[R17] : 'Available' cars are eligible for the reservation.
+[R5] : 'Available' cars are eligible for the reservation.
  
 \end_layout
 
 \begin_layout Itemize
-[R18] : 'Reserved' cars are ready to be picked up.
+[R6] : 'Reserved' cars are ready to be picked up.
 \end_layout
 
 \begin_layout Itemize
-[R19] : 'Unavailable' cars are not eligible for the reservation.
+[R7] : 'Unavailable' cars are not eligible for the reservation.
 \end_layout
 
 \begin_layout Itemize
-[R20] : 'No-charge' cars are not eligible for the reservation.
+[R8] : 'No-charge' cars are not eligible for the reservation.
 \end_layout
 
 \begin_layout Itemize
-[R21] : Cars below the charge treshold are labelled as 'No-charge'.
+[R9] : Cars below the charge treshold are labelled as 'No-charge'.
 \end_layout
 
 \begin_layout Itemize
-[R21] : Whenever a car enters the 'Reserved' status, a reservation timer
+[R10] : Whenever a car enters the 'Reserved' status, a reservation timer
  is started.
 \end_layout
 
 \begin_layout Itemize
-[R22] : At the end of the reservation timer, the car availability status
+[R11] : At the end of the reservation timer, the car availability status
  returns to 'Available'.
  (sembra un flow di azioni finora?)
 \end_layout
 
 \begin_layout Itemize
-[R23] : Upon request by the client, the system provides a list of the nearby
+[R12] : Upon request by the client, the system provides a list of the nearby
  available cars.
  (nearby include entrambi i casi della scelta current position/specific
  address?)
 \end_layout
 
 \begin_layout Itemize
-[R24] : The system allows customers to choose one vehicle among the proposed
+[R13] : The system allows customers to choose one vehicle among the proposed
  available cars.
 \end_layout
 
 \begin_layout Itemize
-[R25] : When an available car is chosen by the client, the system labels
+[R14] : When an available car is chosen by the client, the system labels
  the car as 'Reserved' for a certain duration.
  (ehehe, la durata è un req non funz paraparapunz?)
 \end_layout
 
 \begin_layout Itemize
-[R26] : Reserved cars exceeding the reservation timer award a penalty fee
+[R15] : Reserved cars exceeding the reservation timer award a penalty fee
  to the customer reserving the car.
  
 \end_layout
 
 \begin_layout Itemize
-[R27] : Reserved cars picked-up within the reservation timer are labelled
+[R16] : Reserved cars picked-up within the reservation timer are labelled
  as 'Unavailable'.
 \end_layout
 
 \begin_layout Itemize
-[R28] : When the client leaves the car, the car availability status changes
+[R17] : When the client leaves the car, the car availability status changes
  to 'Available' or 'No-charge', based on the current level of battery.
 \end_layout
 
@@ -1130,52 +1227,52 @@ Functional Requirements
 \end_layout
 
 \begin_layout Itemize
-[R29] : The system is able to receive data from cars.
+[R1] : The system is able to receive data from cars.
 \end_layout
 
 \begin_layout Itemize
-[R30] : The system is able to elaborate data received from cars.
+[R2] : The system is able to elaborate data received from cars.
 \end_layout
 
 \begin_layout Itemize
-[R31] : The system is able to apply discount or additional fees to clients.
+[R3] : The system is able to apply discount or additional fees to clients.
 \end_layout
 
 \begin_layout Itemize
-[R32] : Discounts are not cumulable, when more than one discount are triggered,
+[R4] : Discounts are not cumulable, when more than one discount are triggered,
  only the largest one is applied.
 \end_layout
 
 \begin_layout Itemize
-[R33] : Additional fees are not cumulable, when more than one additional
+[R5] : Additional fees are not cumulable, when more than one additional
  fee are triggered, only the largest one is applied.
 \end_layout
 
 \begin_layout Itemize
-[R34] : If two or more additional passengers are detected onto a car, the
+[R6] : If two or more additional passengers are detected onto a car, the
  system applies a 10% discount on the last ride.
  ( 10% non functional requirement?)
 \end_layout
 
 \begin_layout Itemize
-[R35] : If a car is left with at least 50% of the battery, the system applies
+[R7] : If a car is left with at least 50% of the battery, the system applies
  a 20% discount on the last ride.
  (come sopra)
 \end_layout
 
 \begin_layout Itemize
-[R36] : If a car is left plugged into a power grid, the system applies a
+[R8] : If a car is left plugged into a power grid, the system applies a
  discount of 30% on the last ride.
  (^) DOBBIAMO DEFINIRE come+ IL SISTEMA RICONOSCE UN PLUG IN DELL'UTENTE
 \end_layout
 
 \begin_layout Itemize
-[R37] : The system is able to calculate the distance from the closest power
+[R9] : The system is able to calculate the distance from the closest power
  grid station to a given car in any moment in time.
 \end_layout
 
 \begin_layout Itemize
-[R38] : If a car is left with less than 20% of battery at a distance greater
+[R10] : If a car is left with less than 20% of battery at a distance greater
  than 3km from the closest power grid station, the system applies a 30%
  additional fee on the last ride.
  (come sopra)
@@ -1188,33 +1285,33 @@ Functional Requirements
 \end_layout
 
 \begin_layout Itemize
-[R39] : The system must be able to operate remotely on the cars.
+[R1] : The system must be able to operate remotely on the cars.
 \end_layout
 
 \begin_layout Itemize
-[R40] : Unless an customer or an employee unlocks the car, it remains locked.
+[R2] : Unless an customer or an employee unlocks the car, it remains locked.
 \end_layout
 
 \begin_layout Itemize
-[R41] : Employees can unlock unreserved cars for maintenance.
+[R3] : Employees can unlock unreserved cars for maintenance.
 \end_layout
 
 \begin_layout Itemize
-[R42] : The system must unlock a car only when the customer who reserved
+[R4] : The system must unlock a car only when the customer who reserved
  it approaches.
 \end_layout
 
 \begin_layout Itemize
-[R43] : The system must detect when the client exits the car.
+[R5] : The system must detect when the client exits the car.
 \end_layout
 
 \begin_layout Itemize
-[R44] : The car must be locked when it is parked in a safe place and the
+[R6] : The car must be locked when it is parked in a safe place and the
  client exits it.
 \end_layout
 
 \begin_layout Itemize
-[R45] : The customer must not be able to unlock a car that he/she hasn't
+[R7] : The customer must not be able to unlock a car that he/she hasn't
  reserved.
 \end_layout
 
@@ -1225,43 +1322,42 @@ Functional Requirements
 \end_layout
 
 \begin_layout Itemize
-[R46] : The system must know if a car is running.
+[R1] : The system must know if a car is running.
 \end_layout
 
 \begin_layout Itemize
-[R47] : The system must start charging the client as soon as the engine
- ignites.
+[R2] : The system must start charging the client as soon as the engine ignites.
 \end_layout
 
 \begin_layout Itemize
-[R48] : The system must keep track of the current charge of a car in use.
+[R3] : The system must keep track of the current charge of a car in use.
 \end_layout
 
 \begin_layout Itemize
-[R49] : The system must charge the client with a given amount of money per
+[R4] : The system must charge the client with a given amount of money per
  minute.
 \end_layout
 
 \begin_layout Itemize
-[R50] : The client must be notified in real-time of the current charge.
+[R5] : The client must be notified in real-time of the current charge.
 \end_layout
 
 \begin_layout Itemize
-[R51] : The system must stop charging the client when the car is parked
- in a safe area and the client exits the vehicle.
+[R6] : The system must stop charging the client when the car is parked in
+ a safe area and the client exits the vehicle.
 \end_layout
 
 \begin_layout Itemize
-[R52] : The system must know the discounts a customer has earned.
+[R7] : The system must know the discounts a customer has earned.
 \end_layout
 
 \begin_layout Itemize
-[R53] : At the end of the ride, the system must apply the greater discount
+[R8] : At the end of the ride, the system must apply the greater discount
  among the ones earned by the customer.
 \end_layout
 
 \begin_layout Itemize
-[R54] : The customer is charged according to the chosen payment method.
+[R9] : The customer is charged according to the chosen payment method.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1275,33 +1371,33 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[R55] : At every time the system must know the availability of the power
+[R1] : At every time the system must know the availability of the power
  plugs at every charging station.
 \end_layout
 
 \begin_layout Itemize
-[R56] : The client must be able to communicate his destination to the system.
+[R2] : The client must be able to communicate his destination to the system.
 \end_layout
 
 \begin_layout Itemize
-[R57] : The system must 
+[R3] : The system must 
 \color black
 suggest the customer a power grid taking into account the position of cars
  around the area and trying to create an equal distribution of them.
 \end_layout
 
 \begin_layout Itemize
-[R58] : The system must choose a charging station with at least one available
+[R4] : The system must choose a charging station with at least one available
  power plug.
 \end_layout
 
 \begin_layout Itemize
-[R59] : The system must let the client know the charging station where to
+[R5] : The system must let the client know the charging station where to
  leave the car in order to get the discount.
 \end_layout
 
 \begin_layout Itemize
-[R60] : The chosen charging sttion must be no further than 1.5km from the
+[R6] : The chosen charging sttion must be no further than 1.5km from the
  client destination.
 
 \color red
@@ -1311,7 +1407,7 @@ suggest the customer a power grid taking into account the position of cars
 \end_layout
 
 \begin_layout Itemize
-[R61] : If the customer leaves the car at the indicated charging station
+[R7] : If the customer leaves the car at the indicated charging station
  and connects the plug, he receives a discount.
 \end_layout
 
@@ -1323,28 +1419,28 @@ suggest the customer a power grid taking into account the position of cars
 \end_layout
 
 \begin_layout Itemize
-[R62] : The system must be able to keep track of the battery level of every
+[R1] : The system must be able to keep track of the battery level of every
  car.
 \end_layout
 
 \begin_layout Itemize
-[R63] : If a car has a battery charge below the threshold it is not reservable.
+[R2] : If a car has a battery charge below the threshold it is not reservable.
 \end_layout
 
 \begin_layout Itemize
-[R64] : Whenever a certain car reaches the battery treshold, when it is
- parked further than 3km froma power station, the system will update the
- list of cars that needs an on-site recharge.
+[R3] : Whenever a certain car reaches the battery treshold, when it is parked
+ further than 3km froma power station, the system will update the list of
+ cars that needs an on-site recharge.
 \end_layout
 
 \begin_layout Itemize
-[R65] : When an employee login in his app, he will see the cars that needs
+[R4] : When an employee login in his app, he will see the cars that needs
  to be recharged.
 \end_layout
 
 \begin_layout Itemize
-[R66] : The employee must recharge a car if a customer leaves it in the
- power station without plugging it into the grid.
+[R5] : The employee must recharge a car if a customer leaves it in the power
+ station without plugging it into the grid.
 \end_layout
 
 \begin_layout Subsection
@@ -1956,10 +2052,6 @@ status open
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3026,7 +3118,7 @@ Actor
 \begin_inset Text
 
 \begin_layout Plain Layout
-User
+Customer
 \end_layout
 
 \end_inset
@@ -3066,7 +3158,7 @@ Input Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The user already reserved a car
+The customer already reserved a car
 \end_layout
 
 \end_inset
@@ -3095,8 +3187,8 @@ Event Flow
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.The user request the system to activate the money saving option, and submits
- his destination.
+1.The customer request the system to activate the money saving option, and
+ submits his destination.
 \end_layout
 
 \end_inset
@@ -3120,8 +3212,8 @@ Event Flow
 
 \begin_layout Plain Layout
 3.
- The system shows the user the eligible stations and save them into the
- database.
+ The system shows the customer the eligible stations and save them into
+ the database.
 \end_layout
 
 \end_inset
@@ -3133,7 +3225,7 @@ Event Flow
 
 \begin_layout Plain Layout
 4.
- The user drives to one of the power stations and plugs in the car.
+ The customer drives to one of the power stations and plugs in the car.
 \end_layout
 
 \end_inset
@@ -3204,8 +3296,8 @@ Exception
 \begin_inset Text
 
 \begin_layout Plain Layout
-If the user does not drive to the station, does not plug in the car, or
- does not pick up the reserved car, the bonus is not applied.
+If the customer does not drive to the station, does not plug in the car,
+ or does not pick up the reserved car, the bonus is not applied.
  
 \end_layout
 
@@ -3333,7 +3425,7 @@ Actor
 \begin_inset Text
 
 \begin_layout Plain Layout
-User
+Client
 \end_layout
 
 \end_inset
@@ -3373,7 +3465,7 @@ Input Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The user is riding his reserved car.
+The client is riding his reserved car.
 \end_layout
 
 \end_inset
@@ -3403,7 +3495,7 @@ Event Flow
 
 \begin_layout Plain Layout
 1.
- The user stops and turns off the engine.
+ The client stops and turns off the engine.
 \end_layout
 
 \end_inset
@@ -3415,7 +3507,7 @@ Event Flow
 
 \begin_layout Plain Layout
 2.
- The user leaves the car by closing the driver's door.
+ The client leaves the car by closing the driver's door.
 \end_layout
 
 \end_inset
@@ -3455,7 +3547,8 @@ Money Saving
 
 \begin_layout Plain Layout
 5.
- The system checks in which additional fees and/or discounts the user incurred.
+ The system checks in which additional fees and/or discounts the client
+ incurred.
 \end_layout
 
 \end_inset
@@ -3468,7 +3561,7 @@ Money Saving
 \begin_layout Plain Layout
 6.
  The system applies the largest discount and every additional fees in which
- the user incurred.
+ the client incurred.
 \end_layout
 
 \end_inset
@@ -3480,7 +3573,7 @@ Money Saving
 
 \begin_layout Plain Layout
 7.
- The system charges the user of the total bill.
+ The system charges the client of the total bill.
 \end_layout
 
 \end_inset
@@ -3492,7 +3585,7 @@ Money Saving
 
 \begin_layout Plain Layout
 8.
- The system notifies the user through a message of the payment charge.
+ The system notifies the client through a message of the payment charge.
 \end_layout
 
 \end_inset
@@ -3504,7 +3597,7 @@ Money Saving
 
 \begin_layout Plain Layout
 9.
- The system notifies the user through a message of the applied additional
+ The system notifies the client through a message of the applied additional
  fees and/or discounts.
 \end_layout
 
@@ -3535,7 +3628,7 @@ Output Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The payment is succesfully charged to the user who requested the ride.
+The payment is succesfully charged to the client who requested the ride.
 \end_layout
 
 \end_inset
@@ -3743,7 +3836,7 @@ Event Flow
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.The user access the car list
+1.The employee access the car list
 \end_layout
 
 \end_inset
@@ -3766,7 +3859,8 @@ Event Flow
 
 \begin_layout Plain Layout
 3.
- The user sees the position of all the cars in his area in need of assistance
+ The employee sees the position of all the cars in his area in need of assistanc
+e
 \end_layout
 
 \end_inset
