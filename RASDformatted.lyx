@@ -79,6 +79,10 @@
 \end_inset
 
 
+\begin_inset Newline linebreak
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -142,8 +146,8 @@ Andrea Molgora
 Pietro Morbidelli
 \end_layout
 
-\begin_layout Date
-\begin_inset Newpage pagebreak
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -238,7 +242,7 @@ reference "sec:Overall-Description"
 \begin_layout Enumerate
 \begin_inset CommandInset ref
 LatexCommand nameref
-reference "subsec:Product-Perspective"
+reference "sec:Overall-Description"
 
 \end_inset
 
@@ -246,6 +250,16 @@ reference "subsec:Product-Perspective"
 \end_layout
 
 \begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Product-Perspective"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset CommandInset ref
 LatexCommand nameref
@@ -323,16 +337,6 @@ reference "subsec:Hardware-Limitations"
 \begin_inset CommandInset ref
 LatexCommand nameref
 reference "subsec:User-Interface"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset ref
-LatexCommand nameref
-reference "subsec:Proposed-System"
 
 \end_inset
 
@@ -504,20 +508,20 @@ Scope
 \begin_layout Standard
 The aim of the software house is to grant a functioning mobile app that
  will be used by customers to access the system.
- Users will search for an available electric car they can use to reach their
- destination.
- Users must register to the system providing a valid ID, driving license,
+ Customers will search for an available electric car they can use to reach
+ their destination.
+ Clients must register to the system providing a valid ID, driving license,
  and payment information.
- Once registered, the user can search for a car in his proximity or near
- a certain address.
+ Once registered, the customer can search for a car in his proximity or
+ near a certain address.
  When they find a suitable car, they can reserve it for a certain amount
  of time.
- As the user reaches the car, the system unlocks the car and the user begins
- his ride.
+ As the client reaches the car, the system unlocks the car and the customer
+ begins his ride.
  The vehicle is started and the charging process begins – it will finish
- when the user leaves the car after after having turned it off.
- Money is received via the payment infos the user provided, and the process
- ends with the car returning to a 'free' status.
+ when the client leaves the car after after having turned it off.
+ Money is received via the payment infos the customer provided, and the
+ process ends with the car returning to a 'free' status.
  This is the standard micro-process of the app, though there are a lot of
  details left unspecified for now – they will be described through the document.
 \end_layout
@@ -563,7 +567,7 @@ List of the principal focus of the system:
 \end_layout
 
 \begin_layout Itemize
-[G1] : Allow users to register to the system.
+[G1] : Allow visitors to register to the system.
 \end_layout
 
 \begin_layout Itemize
@@ -571,16 +575,16 @@ List of the principal focus of the system:
 \end_layout
 
 \begin_layout Itemize
-[G3] : Allow registered users to search for available cars within a certain
- area.
+[G3] : Allow registered customers to search for available cars within a
+ certain area.
 \end_layout
 
 \begin_layout Itemize
-[G4] : Manage car reservations requested by users.
+[G4] : Manage car reservations requested by clients.
 \end_layout
 
 \begin_layout Itemize
-[G5] : Establish an awarding system based on users behaviours.
+[G5] : Establish an awarding system based on customers behaviours.
 \end_layout
 
 \begin_layout Itemize
@@ -588,11 +592,11 @@ List of the principal focus of the system:
 \end_layout
 
 \begin_layout Itemize
-[G7] : Charge users proportionally to the car usage.
+[G7] : Charge clients proportionally to the car usage.
 \end_layout
 
 \begin_layout Itemize
-[G8] : Allow users to enter a 
+[G8] : Allow customers to enter a 
 \emph on
 Money Saving
 \emph default
@@ -683,7 +687,7 @@ Product Perspective
 \begin_layout Standard
 The product will be a mobile application, integrated with a GPS system and
  with a payment system.
- It will rely on a database and will be used by both users and employees,
+ It will rely on a database and will be used by both clients and employees,
  though they will have different homescreens and functionalities: clients
  will see, when searching for a vehicle, only the 
 \emph on
@@ -758,13 +762,12 @@ Domain Assumptions
 \end_layout
 
 \begin_layout Itemize
-[D2] : Users, cars and employees are traceable by GPS.
+[D2] : Customers, cars and employees are traceable by GPS.
 \end_layout
 
 \begin_layout Itemize
-[D3] : All the users presented in the document are registered and logged
- in, except for where it is explicitly stated the opposite.
- (OCIOOOOOOOOO)
+[D3] : All the clients presented in the document are registered and logged
+ in.
 \end_layout
 
 \begin_layout Itemize
@@ -778,12 +781,12 @@ Domain Assumptions
 \end_layout
 
 \begin_layout Itemize
-[D6] : We assume that registering users always provide valid credentials
+[D6] : We assume that registering clients always provide valid credentials
  (email, driving license, payment method).
 \end_layout
 
 \begin_layout Itemize
-[D7] : When the user leaves the car, it means the user is closing the driver's
+[D7] : When the customer leaves the car, it means he  is closing the driver's
  door.
 \end_layout
 
@@ -900,7 +903,7 @@ target "https://developers.google.com/maps/"
 
 \end_inset
 
- to calculate the nearest car from the user position and on the 
+ to calculate the nearest car from the customer position and on the 
 \begin_inset CommandInset href
 LatexCommand href
 name "Direct Payment PayPal's API"
@@ -908,7 +911,7 @@ target "https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside"
 
 \end_inset
 
- to ensure a safe payment enviroment for the users.
+ to ensure a safe payment enviroment for the clients.
  Both the API are really well-known so the user will have no trouble using
  the service.
 \end_layout
@@ -924,7 +927,7 @@ Hardware Limitations
 \end_layout
 
 \begin_layout Paragraph
-User/Employee:
+User:
 \end_layout
 
 \begin_layout Itemize
@@ -955,18 +958,18 @@ Functional Requirements
 \end_layout
 
 \begin_layout Subsubsection
-[G1] : Allow users to register into the system.
+[G1] : Allow visitors to register into the system.
 \end_layout
 
 \begin_layout Itemize
-[R1] : Upon a completed registration, the user receives a password to authentica
-te.
+[R1] : Upon a completed registration, the client receives a password to
+ authenticate.
  <- questo va qui?
 \end_layout
 
 \begin_layout Itemize
-[R2] : Users must not be already registered to the system to perform the
- registration process.
+[R2] : Visitors must not be already registered to the system to perform
+ the registration process.
 \end_layout
 
 \begin_layout Itemize
@@ -974,13 +977,13 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R4] : Upon registration, user must furnish an email, an username, a driving
- license and a payment method.
+[R4] : Upon registration, visitors must furnish an email, an username, a
+ driving license and a payment method.
 \end_layout
 
 \begin_layout Itemize
-[R5] : Registration cannot be finalised if a user provides an username,
- email or driving license owned by other users.
+[R5] : Registration cannot be finalised if a client provides an username,
+ email or driving license owned by other customers.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1003,23 +1006,23 @@ te.
 \begin_layout Subsubsection
 
 \series bold
-[G3] : Allow registered users to search for available cars within a certain
+[G3] : Allow registered clients to search for available cars within a certain
  area.
 \end_layout
 
 \begin_layout Itemize
-[R9] : Users must be logged into the system in order to search for available
+[R9] : Customers must be logged into the system in order to search for available
  cars.
 \end_layout
 
 \begin_layout Itemize
-[R10] : The system allows users to choose whether to perform the search
+[R10] : The system allows clients to choose whether to perform the search
  from their current position or a specific address.
 \end_layout
 
 \begin_layout Itemize
 [R11] : The system must be able to recognize the available cars closest
- to the position provided by the user.
+ to the position provided by the customer.
  (va detto che l'obiettivo è obv quello di farle cattare su dagli utenti?)
 \end_layout
 
@@ -1035,11 +1038,11 @@ te.
 \end_layout
 
 \begin_layout Subsubsection
-[G4] : Manage car reservations requested by users.
+[G4] : Manage car reservations requested by clients.
 \end_layout
 
 \begin_layout Itemize
-[Rxx] : Users can not reserve a car if they have a pending payment request.
+[Rxx] : Customers can not reserve a car if they have a pending payment request.
 \end_layout
 
 \begin_layout Itemize
@@ -1089,26 +1092,26 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R23] : Upon request by the user, the system provides a list of the nearby
+[R23] : Upon request by the client, the system provides a list of the nearby
  available cars.
  (nearby include entrambi i casi della scelta current position/specific
  address?)
 \end_layout
 
 \begin_layout Itemize
-[R24] : The system allows users to choose one vehicle among the proposed
+[R24] : The system allows customers to choose one vehicle among the proposed
  available cars.
 \end_layout
 
 \begin_layout Itemize
-[R25] : When an available car is chosen by the user, the system labels the
- car as 'Reserved' for a certain duration.
+[R25] : When an available car is chosen by the client, the system labels
+ the car as 'Reserved' for a certain duration.
  (ehehe, la durata è un req non funz paraparapunz?)
 \end_layout
 
 \begin_layout Itemize
 [R26] : Reserved cars exceeding the reservation timer award a penalty fee
- to the user reserving the car.
+ to the customer reserving the car.
  
 \end_layout
 
@@ -1118,12 +1121,12 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R28] : When the user leaves the car, the car availability status changes
+[R28] : When the client leaves the car, the car availability status changes
  to 'Available' or 'No-charge', based on the current level of battery.
 \end_layout
 
 \begin_layout Subsubsection
-[G5] : Establish an awarding system based on users behaviours.
+[G5] : Establish an awarding system based on customers behaviours.
 \end_layout
 
 \begin_layout Itemize
@@ -1135,7 +1138,7 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R31] : The system is able to apply discount or additional fees to users.
+[R31] : The system is able to apply discount or additional fees to clients.
 \end_layout
 
 \begin_layout Itemize
@@ -1181,7 +1184,7 @@ te.
 \begin_layout Subsubsection
 
 \series bold
-[G6] : Grant the access to users when necessary.
+[G6] : Grant the access to clients when necessary.
 \end_layout
 
 \begin_layout Itemize
@@ -1189,7 +1192,7 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R40] : Unless an user or an employee unlocks the car, it remains locked.
+[R40] : Unless an customer or an employee unlocks the car, it remains locked.
 \end_layout
 
 \begin_layout Itemize
@@ -1197,27 +1200,28 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R42] : The system must unlock a car only when the user who reserved it
- approaches.
+[R42] : The system must unlock a car only when the customer who reserved
+ it approaches.
 \end_layout
 
 \begin_layout Itemize
-[R43] : The system must detect when the user exits the car.
+[R43] : The system must detect when the client exits the car.
 \end_layout
 
 \begin_layout Itemize
 [R44] : The car must be locked when it is parked in a safe place and the
- user exits it.
+ client exits it.
 \end_layout
 
 \begin_layout Itemize
-[R45] : The user must not be able to unlock a car that he/she hasn't reserved.
+[R45] : The customer must not be able to unlock a car that he/she hasn't
+ reserved.
 \end_layout
 
 \begin_layout Subsubsection
 
 \series bold
-[G7] : Charge users proportionally to the car usage.
+[G7] : Charge customers proportionally to the car usage.
 \end_layout
 
 \begin_layout Itemize
@@ -1225,7 +1229,8 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R47] : The system must start charging the user as soon as the engine ignites.
+[R47] : The system must start charging the client as soon as the engine
+ ignites.
 \end_layout
 
 \begin_layout Itemize
@@ -1233,36 +1238,36 @@ te.
 \end_layout
 
 \begin_layout Itemize
-[R49] : The system must charge the user with a given amount of money per
+[R49] : The system must charge the client with a given amount of money per
  minute.
 \end_layout
 
 \begin_layout Itemize
-[R50] : The user must be notified in real-time of the current charge.
+[R50] : The client must be notified in real-time of the current charge.
 \end_layout
 
 \begin_layout Itemize
-[R51] : The system must stop charging the user when the car is parked in
- a safe area and the user exits the vehicle.
+[R51] : The system must stop charging the client when the car is parked
+ in a safe area and the client exits the vehicle.
 \end_layout
 
 \begin_layout Itemize
-[R52] : The system must know the discounts a user has earned.
+[R52] : The system must know the discounts a customer has earned.
 \end_layout
 
 \begin_layout Itemize
 [R53] : At the end of the ride, the system must apply the greater discount
- among the ones earned by the user.
+ among the ones earned by the customer.
 \end_layout
 
 \begin_layout Itemize
-[R54] : The user is charged according to the chosen payment method.
+[R54] : The customer is charged according to the chosen payment method.
 \end_layout
 
 \begin_layout Subsubsection
 
 \series bold
-[G8] : Allow users to enter a 
+[G8] : Allow clients to enter a 
 \emph on
 Money Saving
 \emph default
@@ -1275,14 +1280,14 @@ Money Saving
 \end_layout
 
 \begin_layout Itemize
-[R56] : The user must be able to communicate his destination to the system.
+[R56] : The client must be able to communicate his destination to the system.
 \end_layout
 
 \begin_layout Itemize
 [R57] : The system must 
 \color black
-suggest the user a power grid taking into account the position of cars around
- the area and trying to create an equal distribution of them.
+suggest the customer a power grid taking into account the position of cars
+ around the area and trying to create an equal distribution of them.
 \end_layout
 
 \begin_layout Itemize
@@ -1291,13 +1296,13 @@ suggest the user a power grid taking into account the position of cars around
 \end_layout
 
 \begin_layout Itemize
-[R59] : The system must let the user know the charging station where to
+[R59] : The system must let the client know the charging station where to
  leave the car in order to get the discount.
 \end_layout
 
 \begin_layout Itemize
 [R60] : The chosen charging sttion must be no further than 1.5km from the
- user destination.
+ client destination.
 
 \color red
  
@@ -1306,8 +1311,8 @@ suggest the user a power grid taking into account the position of cars around
 \end_layout
 
 \begin_layout Itemize
-[R61] : If the user leaves the car at the indicated charging station and
- connects the plug, he receives a discount.
+[R61] : If the customer leaves the car at the indicated charging station
+ and connects the plug, he receives a discount.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1338,8 +1343,8 @@ suggest the user a power grid taking into account the position of cars around
 \end_layout
 
 \begin_layout Itemize
-[R66] : The employee must recharge a car if a user leaves it in the power
- station without plugging it into the grid.
+[R66] : The employee must recharge a car if a customer leaves it in the
+ power station without plugging it into the grid.
 \end_layout
 
 \begin_layout Subsection
@@ -1452,8 +1457,8 @@ unavailable.
  
 \emph default
 She drives to her destination and then she parks in a safe area.
- She stops and exits the vehicle: the system stops charging the user and
- proceed to check the battery level, which is above 50%: Karen receives
+ She stops and exits the vehicle: the system stops charging the customer
+ and proceed to check the battery level, which is above 50%: Karen receives
  a 20% discount and the payment is now pending in her account waiting for
  the services to be processed.
  The status of the car goes from 
@@ -1538,7 +1543,7 @@ Money Saving option
  free most of the others.
  Chris takes a look at the proposed stations and save the address of the
  one he chooses: he will drive to that one and will plug the car in the
- station, so that the after the system has recognized that the user plugged
+ station, so that the after the system has recognized that the client plugged
  in the vehicle, it will apply a 30% discount.
 \end_layout
 
@@ -1642,6 +1647,7 @@ Use Case
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -1661,7 +1667,7 @@ Actor
 \begin_inset Text
 
 \begin_layout Plain Layout
-New user
+New customer
 \end_layout
 
 \end_inset
@@ -1731,7 +1737,7 @@ Event Flow
 
 \begin_layout Plain Layout
 1.
- The new user downloads the PowerEnjoy app from the store of his smartphone.
+ The new customer downloads the PowerEnjoy app from the store of his smartphone.
 \end_layout
 
 \end_inset
@@ -1743,7 +1749,7 @@ Event Flow
 
 \begin_layout Plain Layout
 2.
- The new user opens the app and clicks on the registration button.
+ The new customer opens the app and clicks on the registration button.
 \end_layout
 
 \end_inset
@@ -1755,7 +1761,7 @@ Event Flow
 
 \begin_layout Plain Layout
 3.
- The new user fills in all the fields of the registration form and clicks
+ The new customer fills in all the fields of the registration form and clicks
  the confirmation button.
  
 \end_layout
@@ -1800,7 +1806,7 @@ Output Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The user is now registered in the PowerEnjoy system.
+The customer is now registered to the PowerEnjoy system.
  From now on he can log into the app and use his services
 \end_layout
 
@@ -1831,7 +1837,7 @@ Exception
 
 \begin_layout Plain Layout
 1.
- The new user is already registered.
+ The new customer is already registered.
 \end_layout
 
 \end_inset
@@ -1866,8 +1872,8 @@ Exception
 \begin_inset Text
 
 \begin_layout Plain Layout
-All exception are handled by alerting the new user and letting him re-fill
- the incorect fields
+All exception are handled by alerting the new customer and letting him re-fill
+ the incorrect fields
 \end_layout
 
 \end_inset
@@ -1895,6 +1901,7 @@ All exception are handled by alerting the new user and letting him re-fill
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -1926,6 +1933,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -1960,6 +1968,13 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subparagraph
 3.4.1.2 Login
 \begin_inset Newline newline
@@ -1973,6 +1988,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -2233,6 +2249,7 @@ Exception
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -2264,6 +2281,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -2294,6 +2312,13 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subparagraph
 3.4.1.3 Car Reservation
 \begin_inset Newline newline
@@ -2307,6 +2332,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -2326,7 +2352,7 @@ Actor
 \begin_inset Text
 
 \begin_layout Plain Layout
-User
+Client
 \end_layout
 
 \end_inset
@@ -2366,7 +2392,7 @@ Input Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The user is logged into the system
+The customer is logged into the system
 \end_layout
 
 \end_inset
@@ -2395,7 +2421,7 @@ Event Flow
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.The user chooses to search a car by his position or by an address
+1.The client chooses to search a car by his position or by an address
 \end_layout
 
 \end_inset
@@ -2410,7 +2436,7 @@ Event Flow
 \emph on
 available
 \emph default
- cars in theuser proposed area.
+ cars in the user-proposed area.
 \end_layout
 
 \end_inset
@@ -2422,7 +2448,7 @@ available
 
 \begin_layout Plain Layout
 3.
- The user selects a car from the proposed cars
+ The client selects a car from the proposed cars
 \end_layout
 
 \end_inset
@@ -2444,7 +2470,7 @@ available
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.The user confirms the selected car
+5.The client confirms the selected car
 \end_layout
 
 \end_inset
@@ -2491,7 +2517,7 @@ Output Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The user has reserved a car
+The customer has reserved a car
 \end_layout
 
 \end_inset
@@ -2520,7 +2546,7 @@ Exception
 \begin_inset Text
 
 \begin_layout Plain Layout
-If the user cancels the operation the system redirects himn s to the home
+If the customer cancels the operation the system redirects him to the home
  screen of the app.
 \end_layout
 
@@ -2545,6 +2571,7 @@ If the user cancels the operation the system redirects himn s to the home
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -2576,6 +2603,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -2590,6 +2618,8 @@ status open
 	filename diagrams/carreservation sequence diagram.png
 	display false
 	width 70page%
+	height 77cm
+	keepAspectRatio
 
 \end_inset
 
@@ -2601,6 +2631,13 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -2619,6 +2656,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -2638,7 +2676,7 @@ Actor
 \begin_inset Text
 
 \begin_layout Plain Layout
-User
+Client
 \end_layout
 
 \end_inset
@@ -2678,7 +2716,7 @@ Input Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The user has already reserved a car
+The client has already reserved a car
 \end_layout
 
 \end_inset
@@ -2708,7 +2746,7 @@ Event Flow
 
 \begin_layout Plain Layout
 1.
- The user approaches the reserved car.
+ The client approaches the reserved car.
 \end_layout
 
 \end_inset
@@ -2720,7 +2758,7 @@ Event Flow
 
 \begin_layout Plain Layout
 2.
- The user opens the app and clicks on the 
+ The client opens the app and clicks on the 
 \shape italic
 Unlock Reserved Car
 \shape default
@@ -2736,7 +2774,7 @@ Unlock Reserved Car
 
 \begin_layout Plain Layout
 3.
- The system checks if the car and the user have the same position (within
+ The system checks if the car and the client have the same position (within
  a range of 5m).
 \end_layout
 
@@ -2761,7 +2799,7 @@ Unlock Reserved Car
 
 \begin_layout Plain Layout
 5.
- The user accesses the now unlocked car.
+ The client accesses the now unlocked car.
 \end_layout
 
 \end_inset
@@ -2791,7 +2829,7 @@ Output Condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The user has gained access to the car and he is ready to drive.
+The client has gained access to the car and he is ready to drive.
 \end_layout
 
 \end_inset
@@ -2821,7 +2859,7 @@ Exception
 
 \begin_layout Plain Layout
 1.
- The user tries to unlock a car he has not reserved.
+ The client tries to unlock a car he has not reserved.
 \end_layout
 
 \end_inset
@@ -2833,7 +2871,7 @@ Exception
 
 \begin_layout Plain Layout
 2.
- The user is too far from the car he has reserved.
+ The client is too far from the car he has reserved.
 \end_layout
 
 \end_inset
@@ -2845,7 +2883,7 @@ Exception
 
 \begin_layout Plain Layout
 3.
- The user does not reach the car within the given time.
+ The client does not reach the car within the given time.
 \end_layout
 
 \end_inset
@@ -2856,9 +2894,9 @@ Exception
 \begin_inset Text
 
 \begin_layout Plain Layout
-All the exceptions are handled by showing the user an error message and
+All the exceptions are handled by showing the client an error message and
  returning to the home screen of the app.
- Exception 3 is handled also by charging the user with a fee and changing
+ Exception 3 is handled also by charging the client with a fee and changing
  the status of the car to 
 \shape italic
 available.
@@ -2885,6 +2923,7 @@ available.
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -2916,6 +2955,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -2946,6 +2986,13 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subparagraph
 3.4.1.5 Money Saving Option
 \begin_inset Newline newline
@@ -2959,6 +3006,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -3182,6 +3230,7 @@ If the user does not drive to the station, does not plug in the car, or
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -3213,6 +3262,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -3243,6 +3293,13 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subparagraph
 3.4.1.6 Ride Charge
 \begin_inset Newline newline
@@ -3256,6 +3313,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -3511,6 +3569,7 @@ None.
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -3542,6 +3601,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -3556,6 +3616,8 @@ status open
 	filename diagrams/sd-ride_charge.png
 	display false
 	width 70page%
+	height 80pheight%
+	keepAspectRatio
 
 \end_inset
 
@@ -3567,6 +3629,13 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -3585,6 +3654,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -3765,6 +3835,7 @@ If there are no cars in need of assistance, the employee is redirected to
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -3796,6 +3867,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
