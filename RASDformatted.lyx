@@ -523,9 +523,9 @@ The aim of the software house is to grant a functioning mobile app that
 \end_layout
 
 \begin_layout Standard
-The system must eventually inform employees if some cars are left by customers
- with not enough power, so they can pick them up and recharge them on the
- nearest power station.
+The app side for the employees let them login (they will already be registered,
+ since they are hired) and they will receive notifications about the cars
+ that need to be recharged around their area of competence.
 \end_layout
 
 \begin_layout Subsection
@@ -654,10 +654,6 @@ OS: Operating System.
 
 \begin_layout Itemize
 GPS: Global Positioning System.
-\end_layout
-
-\begin_layout Itemize
-SMS: Short Message Service.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -687,10 +683,20 @@ Product Perspective
 \begin_layout Standard
 The product will be a mobile application, integrated with a GPS system and
  with a payment system.
- It will rely on a database and will be entirely user-based: the employees
- will only be contacted via SMS by the system if needed, but they are not
- going to actually use the app.
- The software will not provide any API for integration purposes.
+ It will rely on a database and will be used by both users and employees,
+ though they will have different homescreens and functionalities: clients
+ will see, when searching for a vehicle, only the 
+\emph on
+available
+\emph default
+ cars of the system, they can reserve them and open them, or activate a
+ money saving option.
+ Employees will see only the 
+\emph on
+out of battery
+\emph default
+ cars since the only thing they will do 'overwieved' by the system is the
+ charging on-site of cars parked far from the power stations by the clients.
 \end_layout
 
 \begin_layout Subsection
@@ -905,8 +911,6 @@ target "https://www.paypal.com/cgi-bin/webscr?cmd=_dcc_hub-outside"
  to ensure a safe payment enviroment for the users.
  Both the API are really well-known so the user will have no trouble using
  the service.
- The system must use SMS to coordinate employees, comunicating the coordinates
- of the cars via GoogleMap links.
 \end_layout
 
 \begin_layout Subsubsection
@@ -920,7 +924,7 @@ Hardware Limitations
 \end_layout
 
 \begin_layout Paragraph
-User:
+User/Employee:
 \end_layout
 
 \begin_layout Itemize
@@ -933,32 +937,6 @@ GPS
 
 \begin_layout Itemize
 Space for the app package
-\end_layout
-
-\begin_layout Paragraph
-Employee:
-\end_layout
-
-\begin_layout Itemize
-GPS
-\end_layout
-
-\begin_layout Itemize
-GoogleMaps installed
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Proposed-System"
-
-\end_inset
-
-Proposed System
-\end_layout
-
-\begin_layout Standard
-disegnino del sistema con DB, user ecc
 \end_layout
 
 \begin_layout Subsection
@@ -1350,13 +1328,13 @@ suggest the user a power grid taking into account the position of cars around
 
 \begin_layout Itemize
 [R64] : Whenever a certain car reaches the battery treshold, when it is
- parked further than 3km froma power station, the nearest employee is notified
- with a SMS communicating the location of the car (via GoogleMaps link).
+ parked further than 3km froma power station, the system will update the
+ list of cars that needs an on-site recharge.
 \end_layout
 
 \begin_layout Itemize
-[R65] : The notified employee must reach the car and recharge it with a
- portable generator.
+[R65] : When an employee login in his app, he will see the cars that needs
+ to be recharged.
 \end_layout
 
 \begin_layout Itemize
@@ -1609,29 +1587,26 @@ Scenario 6B: Car recharged by Employee
 \end_layout
 
 \begin_layout Standard
-The system, after changing the car status to 
+Tristan is an employee of 
 \emph on
-out of battery, 
+PowerEnjoy
 \emph default
-searches for the nearest employee and sends him an SMS with a link to the
- coordinates of the car using GoogleMaps.
- The Employee receives the SMS and opens the Maps: he will drive to the
- car and unlock it with his keys, that grant him the access without asking
- the system.
- He will then plug the car to a portable generator he brought with him.
- The system will change the car status when the battery reaches 80% from
- 
+ and as he logs in the application he sees that a client has left a car
+ with 15% battery left.
+ So he drives to the car and unlock it with his keys, that grant him the
+ access without asking the system.
+ He starts recharging the car on-site.
+ He waits there until the vehicle is recharged: the system changes the status
+ from 
 \emph on
 out of battery 
 \emph default
-to
+to 
 \emph on
- available, 
+available 
 \emph default
-and the employee will return to the power station where he's assigned.
-
-\emph on
- 
+and the employee can see this on his app.
+ He unplugs the vehicle and returns to the power station he's assigned.
 \end_layout
 
 \begin_layout Subsection
@@ -2017,7 +1992,7 @@ Actor
 \begin_inset Text
 
 \begin_layout Plain Layout
-User
+Customer/Employee
 \end_layout
 
 \end_inset
@@ -2078,7 +2053,7 @@ Event Flow
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="1">
+<lyxtabular version="3" rows="5" columns="1">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="50page%">
 <row>
@@ -2143,6 +2118,18 @@ application shows the login form, asking for user credentials (username
 \emph on
 4.
  The system tries to validate the provided credentials.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+ The system shows the right screen to the user (client/employees homescreens)
 \end_layout
 
 \end_inset
@@ -3567,6 +3554,260 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename diagrams/sd-ride_charge.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+3.4.1.7 Check out-of-battery cars
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="50page%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Employee
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[G9]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Input Condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The employee is logged into the system
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Event Flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="50page%">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.The user access the car list
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.The systems sends new info about cars in need of assistance
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ The user sees the position of all the cars in his area in need of assistance
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output Condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The Employee knows the position 
+\emph on
+of out of battery
+\emph default
+ cars amd will proceed to recharge them
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exception
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+If there are no cars in need of assistance, the employee is redirected to
+ the home screen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Unnumbered
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename diagrams/uc-carchecking.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Unnumbered
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename diagrams/sd car checking.png
 	display false
 	width 70page%
 
